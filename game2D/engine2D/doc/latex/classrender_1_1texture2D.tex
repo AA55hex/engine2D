@@ -1,0 +1,200 @@
+\hypertarget{classrender_1_1texture2D}{}\doxysection{Класс render\+::texture2D}
+\label{classrender_1_1texture2D}\index{render::texture2D@{render::texture2D}}
+
+
+Класс-\/текстура Представляет собой абстракцию загруженой gl-\/текстуры.  
+
+
+
+
+{\ttfamily \#include $<$texture2\+D.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrender_1_1texture2D_a237a59b5b79b7e2dd2361c5bbc94a3b8}{texture2D}} (int width, int height, const void $\ast$data, color\+\_\+format format, const GLenum filter=GL\+\_\+\+LINEAR, const GLenum wrap\+Mode=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE)
+\begin{DoxyCompactList}\small\item\em Инициализация текстуры \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1texture2D_ab1936043deca3a8d0519d5e0ef56ea39}\label{classrender_1_1texture2D_ab1936043deca3a8d0519d5e0ef56ea39}} 
+void \mbox{\hyperlink{classrender_1_1texture2D_ab1936043deca3a8d0519d5e0ef56ea39}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Сделать текстуру активной Привязывает текстуру к активному текстурному буферу. Одновременно один текстурный буфер может содержать одну текстуру \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrender_1_1texture2D_a9df0736a80386c990dedade87ca43b87}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Возврат ширины текстуры \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrender_1_1texture2D_af86c1fb536bbaa03f18b88ba86df8d13}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Возврат высоты текстуры \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1texture2D_ab688f5acb2c87de55b4815e837c01451}\label{classrender_1_1texture2D_ab688f5acb2c87de55b4815e837c01451}} 
+{\bfseries texture2D} (\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1texture2D_a940c79ab65a4bbb70cb4f68a199b0cfa}\label{classrender_1_1texture2D_a940c79ab65a4bbb70cb4f68a199b0cfa}} 
+\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \&\&)
+\item 
+const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \& \mbox{\hyperlink{classrender_1_1texture2D_a69e8c9449f8898b7883e6b08aff263c3}{add\+\_\+subtexture}} (std\+::string key, const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&subtexture)
+\begin{DoxyCompactList}\small\item\em Добавление подтекстуры из текстуры. Добавляет координаты подтекстуры в хранилище подтекстур объекта. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \& \mbox{\hyperlink{classrender_1_1texture2D_a4c94ed1a004b771fa8cb5ba27382ee37}{add\+\_\+subtexture}} (std\+::string key, glm\+::vec2 left\+\_\+bottom, glm\+::vec2 right\+\_\+top)
+\begin{DoxyCompactList}\small\item\em Добавление подтекстуры из текстуры. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \& \mbox{\hyperlink{classrender_1_1texture2D_a2efaec6e360f0151da88702364b6fe83}{get\+\_\+subtexture}} (std\+::string key) const
+\begin{DoxyCompactList}\small\item\em Возврат подтекстуры Ищет подтекстуру объекта по её имени. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1texture2D_a4dbb0ed3baad001aa467536caf81cee4}\label{classrender_1_1texture2D_a4dbb0ed3baad001aa467536caf81cee4}} 
+{\bfseries texture2D} (\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1texture2D_aaab218f9bb03e4cff06d3a0115cd4cd3}\label{classrender_1_1texture2D_aaab218f9bb03e4cff06d3a0115cd4cd3}} 
+\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrender_1_1texture2D_ab242dbafa6f1cd0140d49079c464e064}{active\+\_\+texture}} (unsigned int offset)
+\begin{DoxyCompactList}\small\item\em Активировать буфер текстуры Активирует текстурный буфер по его номеру. Текстурный буфер используется для привязки текстуры к нему. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс-\/текстура Представляет собой абстракцию загруженой gl-\/текстуры. 
+
+\begin{DoxyNote}{Заметки}
+Координаты текстур нормализованы по диапазону \mbox{[}0;1\mbox{]}. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1texture2D_a237a59b5b79b7e2dd2361c5bbc94a3b8}\label{classrender_1_1texture2D_a237a59b5b79b7e2dd2361c5bbc94a3b8}} 
+\index{render::texture2D@{render::texture2D}!texture2D@{texture2D}}
+\index{texture2D@{texture2D}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{texture2D()}{texture2D()}}
+{\footnotesize\ttfamily render\+::texture2\+D\+::texture2D (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const void $\ast$}]{data,  }\item[{color\+\_\+format}]{format,  }\item[{const GLenum}]{filter = {\ttfamily GL\+\_\+LINEAR},  }\item[{const GLenum}]{wrap\+Mode = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE} }\end{DoxyParamCaption})}
+
+
+
+Инициализация текстуры 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em width} & ширина текстуры \\
+\hline
+{\em height} & высота текстуры \\
+\hline
+{\em data} & указатель на данные текстуры \\
+\hline
+{\em format} & цветовая модель \\
+\hline
+{\em filter} & режим фильтрации текстуры при рендере \\
+\hline
+{\em wrap\+Mode} & поведение текстуры при отрисовке \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1texture2D_ab242dbafa6f1cd0140d49079c464e064}\label{classrender_1_1texture2D_ab242dbafa6f1cd0140d49079c464e064}} 
+\index{render::texture2D@{render::texture2D}!active\_texture@{active\_texture}}
+\index{active\_texture@{active\_texture}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{active\_texture()}{active\_texture()}}
+{\footnotesize\ttfamily static void render\+::texture2\+D\+::active\+\_\+texture (\begin{DoxyParamCaption}\item[{unsigned int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Активировать буфер текстуры Активирует текстурный буфер по его номеру. Текстурный буфер используется для привязки текстуры к нему. 
+
+\begin{DoxyNote}{Заметки}
+Одновременно может быть активнен только один текстурный буфер. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em offset} & индекс текстурного буфера. Максимальный диапазон \mbox{[}0;31\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrender_1_1texture2D_a69e8c9449f8898b7883e6b08aff263c3}\label{classrender_1_1texture2D_a69e8c9449f8898b7883e6b08aff263c3}} 
+\index{render::texture2D@{render::texture2D}!add\_subtexture@{add\_subtexture}}
+\index{add\_subtexture@{add\_subtexture}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{add\_subtexture()}{add\_subtexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}}\& render\+::texture2\+D\+::add\+\_\+subtexture (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&}]{subtexture }\end{DoxyParamCaption})}
+
+
+
+Добавление подтекстуры из текстуры. Добавляет координаты подтекстуры в хранилище подтекстур объекта. 
+
+\begin{DoxyNote}{Заметки}
+Координаты текстур нормализованы по диапазону \mbox{[}0;1\mbox{]}. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & имя подтекстуры \\
+\hline
+{\em subtexture} & описатель области подтекстуры \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Созданная подтекстура 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1texture2D_a4c94ed1a004b771fa8cb5ba27382ee37}\label{classrender_1_1texture2D_a4c94ed1a004b771fa8cb5ba27382ee37}} 
+\index{render::texture2D@{render::texture2D}!add\_subtexture@{add\_subtexture}}
+\index{add\_subtexture@{add\_subtexture}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{add\_subtexture()}{add\_subtexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}}\& render\+::texture2\+D\+::add\+\_\+subtexture (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{glm\+::vec2}]{left\+\_\+bottom,  }\item[{glm\+::vec2}]{right\+\_\+top }\end{DoxyParamCaption})}
+
+
+
+Добавление подтекстуры из текстуры. 
+
+\begin{DoxyNote}{Заметки}
+Координаты текстур нормализованы по диапазону \mbox{[}0;1\mbox{]}. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & имя подтекстуры \\
+\hline
+{\em left\+\_\+bottom} & левый нижний угол подтекстуры \\
+\hline
+{\em right\+\_\+top} & правый верхний угол подтекстуры \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Созданная подтекстура 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1texture2D_af86c1fb536bbaa03f18b88ba86df8d13}\label{classrender_1_1texture2D_af86c1fb536bbaa03f18b88ba86df8d13}} 
+\index{render::texture2D@{render::texture2D}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily int render\+::texture2\+D\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возврат высоты текстуры 
+
+\begin{DoxyReturn}{Возвращает}
+Высота текстуры 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1texture2D_a2efaec6e360f0151da88702364b6fe83}\label{classrender_1_1texture2D_a2efaec6e360f0151da88702364b6fe83}} 
+\index{render::texture2D@{render::texture2D}!get\_subtexture@{get\_subtexture}}
+\index{get\_subtexture@{get\_subtexture}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{get\_subtexture()}{get\_subtexture()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}}\& render\+::texture2\+D\+::get\+\_\+subtexture (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Возврат подтекстуры Ищет подтекстуру объекта по её имени. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & имя подтекстуры \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Подтекстура объекта. Если подтекстура не найдена, возвращается вся текстура 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1texture2D_a9df0736a80386c990dedade87ca43b87}\label{classrender_1_1texture2D_a9df0736a80386c990dedade87ca43b87}} 
+\index{render::texture2D@{render::texture2D}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!render::texture2D@{render::texture2D}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily int render\+::texture2\+D\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возврат ширины текстуры 
+
+\begin{DoxyReturn}{Возвращает}
+Ширина текстуры 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/texture2\+D.\+h\end{DoxyCompactItemize}

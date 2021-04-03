@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/input/input_manager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9f5c276ab9fb4f37ad248a8f0e5ee4a1.html">input</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">input_manager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;glm/vec2.hpp&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;input_event.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>input</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classinput_1_1input__manager.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classinput_1_1input__manager.html">input_manager</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classinput_1_1input__manager.html">input_manager</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classinput_1_1input__manager.html#a4d3ecd90c99a1299e7c0fe50d9ab841b">   28</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classinput_1_1input__manager.html#a4d3ecd90c99a1299e7c0fe50d9ab841b">read_input</a>(<a class="code" href="structinput_1_1input__event.html">input_event</a>* event);</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classinput_1_1input__manager.html#a0b8903e60b31042a2f604522ea544207">   35</a></span>&#160;  <span class="keyword">static</span> glm::vec2 <a class="code" href="classinput_1_1input__manager.html#a0b8903e60b31042a2f604522ea544207">get_mouse_state</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}  <span class="comment">// namespace input</span></div>
+<div class="ttc" id="aclassinput_1_1input__manager_html"><div class="ttname"><a href="classinput_1_1input__manager.html">input::input_manager</a></div><div class="ttdoc">Менеджер событий ввода Центральный класс, отвечающий за организацю передачи данных о событиях ввода и...</div><div class="ttdef"><b>Definition:</b> input_manager.h:18</div></div>
+<div class="ttc" id="aclassinput_1_1input__manager_html_a0b8903e60b31042a2f604522ea544207"><div class="ttname"><a href="classinput_1_1input__manager.html#a0b8903e60b31042a2f604522ea544207">input::input_manager::get_mouse_state</a></div><div class="ttdeci">static glm::vec2 get_mouse_state()</div><div class="ttdoc">Возвращает положение мыши (x;y) на экране в диапазоне [-1;1].</div></div>
+<div class="ttc" id="aclassinput_1_1input__manager_html_a4d3ecd90c99a1299e7c0fe50d9ab841b"><div class="ttname"><a href="classinput_1_1input__manager.html#a4d3ecd90c99a1299e7c0fe50d9ab841b">input::input_manager::read_input</a></div><div class="ttdeci">static bool read_input(input_event *event)</div><div class="ttdoc">Чтение следущего события клавиатуры</div></div>
+<div class="ttc" id="astructinput_1_1input__event_html"><div class="ttname"><a href="structinput_1_1input__event.html">input::input_event</a></div><div class="ttdoc">Событие окна Описывает поступающее событие из игрового окна</div><div class="ttdef"><b>Definition:</b> input_event.h:59</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/core/engine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">engine.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>sound</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span>sound_buffer;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> audio_callback(<span class="keywordtype">void</span>* userdata, Uint8* stream, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}  <span class="comment">// namespace sound</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span>renderer;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>input</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>input_manager;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>igame;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcore_1_1engine.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcore_1_1engine.html">engine</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classcore_1_1engine.html">engine</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d">   53</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d">inicialize</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, std::string title,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                         <span class="keywordtype">bool</span> gl_debug = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classcore_1_1engine.html#a35b4362ceb99637f7e9ff52ae146e8d5">   60</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcore_1_1engine.html#a35b4362ceb99637f7e9ff52ae146e8d5">dispose</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcore_1_1engine.html#afb0b02329b3319972a33882a63f4f96e">   65</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classcore_1_1engine.html#afb0b02329b3319972a33882a63f4f96e">is_inicialized</a>() { <span class="keywordflow">return</span> inicialized; }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcore_1_1engine.html#ad728463058698a2019e62680b022efdb">   83</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcore_1_1engine.html#ad728463058698a2019e62680b022efdb">play</a>(<a class="code" href="classcore_1_1igame.html">igame</a>&amp; game);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsound_1_1sound__buffer.html">sound::sound_buffer</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> sound::audio_callback(<span class="keywordtype">void</span>*, Uint8* stream, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classinput_1_1input__manager.html">input::input_manager</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> inicialized{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> window_init(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, std::string title,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                          <span class="keywordtype">bool</span> gl_debug);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> audio_init();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">struct </span>audio_data</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    SDL_AudioDeviceID audio_device;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    SDL_AudioSpec audio_device_spec;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">struct </span>window_data</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    SDL_Window* window;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    SDL_GLContext gl_context;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> height;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span> width;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">inline</span> <span class="keyword">static</span> audio_data audio{};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">inline</span> <span class="keyword">static</span> window_data window{};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="ttc" id="aclasscore_1_1engine_html"><div class="ttname"><a href="classcore_1_1engine.html">core::engine</a></div><div class="ttdoc">Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame....</div><div class="ttdef"><b>Definition:</b> engine.h:35</div></div>
+<div class="ttc" id="aclasscore_1_1engine_html_a32578b3553feddfd8821718fc2ab2b8d"><div class="ttname"><a href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d">core::engine::inicialize</a></div><div class="ttdeci">static bool inicialize(int width, int height, std::string title, bool gl_debug=false)</div><div class="ttdoc">Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов....</div></div>
+<div class="ttc" id="aclasscore_1_1engine_html_a35b4362ceb99637f7e9ff52ae146e8d5"><div class="ttname"><a href="classcore_1_1engine.html#a35b4362ceb99637f7e9ff52ae146e8d5">core::engine::dispose</a></div><div class="ttdeci">static void dispose()</div><div class="ttdoc">Освобождение ресурсов движка</div></div>
+<div class="ttc" id="aclasscore_1_1engine_html_ad728463058698a2019e62680b022efdb"><div class="ttname"><a href="classcore_1_1engine.html#ad728463058698a2019e62680b022efdb">core::engine::play</a></div><div class="ttdeci">static void play(igame &amp;game)</div><div class="ttdoc">Запуск цикла игры Сначала происходит разовая поптыка инициализации игры, если она не была произведена...</div></div>
+<div class="ttc" id="aclasscore_1_1engine_html_afb0b02329b3319972a33882a63f4f96e"><div class="ttname"><a href="classcore_1_1engine.html#afb0b02329b3319972a33882a63f4f96e">core::engine::is_inicialized</a></div><div class="ttdeci">static bool is_inicialized()</div><div class="ttdoc">Состояние инициализации движка</div><div class="ttdef"><b>Definition:</b> engine.h:65</div></div>
+<div class="ttc" id="aclasscore_1_1igame_html"><div class="ttname"><a href="classcore_1_1igame.html">core::igame</a></div><div class="ttdoc">igame - интерфейс взаимодействия с классом engine.</div><div class="ttdef"><b>Definition:</b> igame.h:11</div></div>
+<div class="ttc" id="aclassinput_1_1input__manager_html"><div class="ttname"><a href="classinput_1_1input__manager.html">input::input_manager</a></div><div class="ttdoc">Менеджер событий ввода Центральный класс, отвечающий за организацю передачи данных о событиях ввода и...</div><div class="ttdef"><b>Definition:</b> input_manager.h:18</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html"><div class="ttname"><a href="classsound_1_1sound__buffer.html">sound::sound_buffer</a></div><div class="ttdoc">Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек....</div><div class="ttdef"><b>Definition:</b> sound_buffer.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

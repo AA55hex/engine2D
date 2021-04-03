@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/sound/sound_buffer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bf8b89aaa3772fd188f30945fd9f6e01.html">sound</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sound_buffer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;wav_sound.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>sound</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsound_1_1sound__buffer.html">sound_buffer</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">using</span> playback_ptr = std::shared_ptr&lt;wav_sound::playback&gt;;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">   25</a></span>&#160;  <a class="code" href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">sound_buffer</a>(<span class="keywordtype">int</span> silence = 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#a264b6870c19b474c1f2dd2678f4b431b">   31</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsound_1_1sound__buffer.html#a264b6870c19b474c1f2dd2678f4b431b">use</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#a926d69368653745efbc21491167d4d70">   36</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsound_1_1sound__buffer.html#a926d69368653745efbc21491167d4d70">detach</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#a832efbb2785af43aa409b4a9f687a48c">   44</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsound_1_1sound__buffer.html#a832efbb2785af43aa409b4a9f687a48c">push_playback</a>(playback_ptr playback);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#a44db890cb15f02fd109cac7024ab233e">   49</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsound_1_1sound__buffer.html#a44db890cb15f02fd109cac7024ab233e">clear</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  ~<a class="code" href="classsound_1_1sound__buffer.html">sound_buffer</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classsound_1_1sound__buffer.html#a4bdc78b5041a25681a26a584ed78b75d">   56</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classsound_1_1sound__buffer.html">sound_buffer</a>* <a class="code" href="classsound_1_1sound__buffer.html#a4bdc78b5041a25681a26a584ed78b75d">current</a>() { <span class="keywordflow">return</span> current_buffer; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">int</span> silence{0};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::vector&lt;playback_ptr&gt; playback_list{};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> audio_callback(<span class="keywordtype">void</span>* userdata, Uint8* stream, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">sound_buffer</a>* current_buffer{};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}  <span class="comment">// namespace sound</span></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html"><div class="ttname"><a href="classsound_1_1sound__buffer.html">sound::sound_buffer</a></div><div class="ttdoc">Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек....</div><div class="ttdef"><b>Definition:</b> sound_buffer.h:16</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_a264b6870c19b474c1f2dd2678f4b431b"><div class="ttname"><a href="classsound_1_1sound__buffer.html#a264b6870c19b474c1f2dd2678f4b431b">sound::sound_buffer::use</a></div><div class="ttdeci">void use()</div><div class="ttdoc">Активация звукового буфера Делает буфер активным, проигрывая его массив звуков</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_a44db890cb15f02fd109cac7024ab233e"><div class="ttname"><a href="classsound_1_1sound__buffer.html#a44db890cb15f02fd109cac7024ab233e">sound::sound_buffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Очищает звуковой поток</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_a4bdc78b5041a25681a26a584ed78b75d"><div class="ttname"><a href="classsound_1_1sound__buffer.html#a4bdc78b5041a25681a26a584ed78b75d">sound::sound_buffer::current</a></div><div class="ttdeci">static sound_buffer * current()</div><div class="ttdoc">Возврат активного звукового буфера</div><div class="ttdef"><b>Definition:</b> sound_buffer.h:56</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_a832efbb2785af43aa409b4a9f687a48c"><div class="ttname"><a href="classsound_1_1sound__buffer.html#a832efbb2785af43aa409b4a9f687a48c">sound::sound_buffer::push_playback</a></div><div class="ttdeci">void push_playback(playback_ptr playback)</div><div class="ttdoc">Добавляет проигрываемую дорожку в конец списка</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_a926d69368653745efbc21491167d4d70"><div class="ttname"><a href="classsound_1_1sound__buffer.html#a926d69368653745efbc21491167d4d70">sound::sound_buffer::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdoc">Деактивация звукового буфера</div></div>
+<div class="ttc" id="aclasssound_1_1sound__buffer_html_afc9e871ae9265f211c32f53664777cbc"><div class="ttname"><a href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">sound::sound_buffer::sound_buffer</a></div><div class="ttdeci">sound_buffer(int silence=0)</div><div class="ttdoc">Инициализация звукового буфера с заданием тишины</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

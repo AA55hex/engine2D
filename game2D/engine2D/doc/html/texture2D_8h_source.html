@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/render/texture2D.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ada157988d47c0ed8971be2c0e2fe61c.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">texture2D.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;glm/vec2.hpp&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;render/frame_structures.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">enum class</span> color_format</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  red = GL_RED,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  green = GL_GREEN,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  blue = GL_BLUE,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  alpha = GL_ALPHA,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  rgb = GL_RGB,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  rgba = GL_RGBA</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrender_1_1texture2D.html">texture2D</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">   39</a></span>&#160;  <a class="code" href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">texture2D</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">void</span>* data, color_format format,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">const</span> GLenum filter = GL_LINEAR,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">const</span> GLenum wrapMode = GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#ab1936043deca3a8d0519d5e0ef56ea39">   48</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1texture2D.html#ab1936043deca3a8d0519d5e0ef56ea39">bind</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#a9df0736a80386c990dedade87ca43b87">   54</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrender_1_1texture2D.html#a9df0736a80386c990dedade87ca43b87">get_width</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#af86c1fb536bbaa03f18b88ba86df8d13">   60</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrender_1_1texture2D.html#af86c1fb536bbaa03f18b88ba86df8d13">get_height</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  ~<a class="code" href="classrender_1_1texture2D.html">texture2D</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">texture2D</a>(<a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp;&amp;);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp; operator=(<a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp;&amp;);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#a69e8c9449f8898b7883e6b08aff263c3">   77</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; <a class="code" href="classrender_1_1texture2D.html#a69e8c9449f8898b7883e6b08aff263c3">add_subtexture</a>(std::string key,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                         <span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; subtexture);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#a4c94ed1a004b771fa8cb5ba27382ee37">   90</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; <a class="code" href="classrender_1_1texture2D.html#a4c94ed1a004b771fa8cb5ba27382ee37">add_subtexture</a>(std::string key, glm::vec2 left_bottom,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                         glm::vec2 right_top);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#a2efaec6e360f0151da88702364b6fe83">  100</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; <a class="code" href="classrender_1_1texture2D.html#a2efaec6e360f0151da88702364b6fe83">get_subtexture</a>(std::string key) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">texture2D</a>(<a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp; operator=(<a class="code" href="classrender_1_1texture2D.html">texture2D</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classrender_1_1texture2D.html#ab242dbafa6f1cd0140d49079c464e064">  112</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classrender_1_1texture2D.html#ab242dbafa6f1cd0140d49079c464e064">active_texture</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> restore(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">void</span>* data, color_format format);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  GLuint <span class="keywordtype">id</span>{0};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">int</span> height{0};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> width{0};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  std::map&lt;std::string, frame_descriptor&gt; subtexture_map{};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">const</span> frame_descriptor default_texture{};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}  <span class="comment">// namespace render</span></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html"><div class="ttname"><a href="classrender_1_1texture2D.html">render::texture2D</a></div><div class="ttdoc">Класс-текстура Представляет собой абстракцию загруженой gl-текстуры.</div><div class="ttdef"><b>Definition:</b> texture2D.h:28</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_a237a59b5b79b7e2dd2361c5bbc94a3b8"><div class="ttname"><a href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">render::texture2D::texture2D</a></div><div class="ttdeci">texture2D(int width, int height, const void *data, color_format format, const GLenum filter=GL_LINEAR, const GLenum wrapMode=GL_CLAMP_TO_EDGE)</div><div class="ttdoc">Инициализация текстуры</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_a2efaec6e360f0151da88702364b6fe83"><div class="ttname"><a href="classrender_1_1texture2D.html#a2efaec6e360f0151da88702364b6fe83">render::texture2D::get_subtexture</a></div><div class="ttdeci">const frame_descriptor &amp; get_subtexture(std::string key) const</div><div class="ttdoc">Возврат подтекстуры Ищет подтекстуру объекта по её имени.</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_a4c94ed1a004b771fa8cb5ba27382ee37"><div class="ttname"><a href="classrender_1_1texture2D.html#a4c94ed1a004b771fa8cb5ba27382ee37">render::texture2D::add_subtexture</a></div><div class="ttdeci">const frame_descriptor &amp; add_subtexture(std::string key, glm::vec2 left_bottom, glm::vec2 right_top)</div><div class="ttdoc">Добавление подтекстуры из текстуры.</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_a69e8c9449f8898b7883e6b08aff263c3"><div class="ttname"><a href="classrender_1_1texture2D.html#a69e8c9449f8898b7883e6b08aff263c3">render::texture2D::add_subtexture</a></div><div class="ttdeci">const frame_descriptor &amp; add_subtexture(std::string key, const frame_descriptor &amp;subtexture)</div><div class="ttdoc">Добавление подтекстуры из текстуры. Добавляет координаты подтекстуры в хранилище подтекстур объекта.</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_a9df0736a80386c990dedade87ca43b87"><div class="ttname"><a href="classrender_1_1texture2D.html#a9df0736a80386c990dedade87ca43b87">render::texture2D::get_width</a></div><div class="ttdeci">int get_width() const</div><div class="ttdoc">Возврат ширины текстуры</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_ab1936043deca3a8d0519d5e0ef56ea39"><div class="ttname"><a href="classrender_1_1texture2D.html#ab1936043deca3a8d0519d5e0ef56ea39">render::texture2D::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdoc">Сделать текстуру активной Привязывает текстуру к активному текстурному буферу. Одновременно один текс...</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_ab242dbafa6f1cd0140d49079c464e064"><div class="ttname"><a href="classrender_1_1texture2D.html#ab242dbafa6f1cd0140d49079c464e064">render::texture2D::active_texture</a></div><div class="ttdeci">static void active_texture(unsigned int offset)</div><div class="ttdoc">Активировать буфер текстуры Активирует текстурный буфер по его номеру. Текстурный буфер используется ...</div></div>
+<div class="ttc" id="aclassrender_1_1texture2D_html_af86c1fb536bbaa03f18b88ba86df8d13"><div class="ttname"><a href="classrender_1_1texture2D.html#af86c1fb536bbaa03f18b88ba86df8d13">render::texture2D::get_height</a></div><div class="ttdeci">int get_height() const</div><div class="ttdoc">Возврат высоты текстуры</div></div>
+<div class="ttc" id="astructrender_1_1frame__descriptor_html"><div class="ttname"><a href="structrender_1_1frame__descriptor.html">render::frame_descriptor</a></div><div class="ttdoc">Описатель области текстуры или текстурного атласа</div><div class="ttdef"><b>Definition:</b> frame_structures.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

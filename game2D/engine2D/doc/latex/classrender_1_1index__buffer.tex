@@ -1,0 +1,142 @@
+\hypertarget{classrender_1_1index__buffer}{}\doxysection{Класс render\+::index\+\_\+buffer}
+\label{classrender_1_1index__buffer}\index{render::index\_buffer@{render::index\_buffer}}
+
+
+Буфер индексов вершин шейдера Данный класс является оболочкой gl-\/структуры, отвечающей за хранение номеров вершин для отрисовки в определенном порядке  
+
+
+
+
+{\ttfamily \#include $<$index\+\_\+buffer.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_a5ef5c31f82cc793e740eb40562096506}\label{classrender_1_1index__buffer_a5ef5c31f82cc793e740eb40562096506}} 
+\mbox{\hyperlink{classrender_1_1index__buffer_a5ef5c31f82cc793e740eb40562096506}{index\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация пустым буфером \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrender_1_1index__buffer_a2424a8ec6cab19b71763c6539086b30c}{index\+\_\+buffer}} (const unsigned int count, const unsigned int $\ast$data)
+\begin{DoxyCompactList}\small\item\em Инициализация \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}\label{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}} 
+void \mbox{\hyperlink{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Активация буфера Привязывает буфер к контексту окна, делая его активным. Все данные об индексах вершин берутся только из активного буфера. Одновременно активным может быть только один буфер, при активации одного буфера, остальные становятся неактивными. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_a5d220d9d6033c4486c6b8daa710b89c1}\label{classrender_1_1index__buffer_a5d220d9d6033c4486c6b8daa710b89c1}} 
+void \mbox{\hyperlink{classrender_1_1index__buffer_a5d220d9d6033c4486c6b8daa710b89c1}{detach}} () const
+\begin{DoxyCompactList}\small\item\em Деактивация буфера Отвязывает буфер от контекста окна, устанавливая буфер по умолчанию \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1index__buffer_a1fc6c9f8011af89a586250ccc2d047fe}{restore}} (const unsigned int count, const unsigned int $\ast$data)
+\begin{DoxyCompactList}\small\item\em Перезагрузка буфера Сбрасывает массив данных в буфере и создает новый, заполняя его новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1index__buffer_a7229c5e05b610a0ef5065c8477a8b2f0}{update}} (const unsigned int count, const unsigned int $\ast$data)
+\begin{DoxyCompactList}\small\item\em Изменение буфера Перезаписывает данные буфера, начиная с первого элемента массива новыми данными. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_a60e1cad5d10e71a23496e1597885a750}\label{classrender_1_1index__buffer_a60e1cad5d10e71a23496e1597885a750}} 
+{\bfseries index\+\_\+buffer} (\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_adfdba19f24972c6be21e6f488d4275cd}\label{classrender_1_1index__buffer_adfdba19f24972c6be21e6f488d4275cd}} 
+\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_a07d5ece4a7027cee24a66e64f94c3166}\label{classrender_1_1index__buffer_a07d5ece4a7027cee24a66e64f94c3166}} 
+{\bfseries index\+\_\+buffer} (\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1index__buffer_ab591cf5f1b9780b793d1e94ccb82ae0b}\label{classrender_1_1index__buffer_ab591cf5f1b9780b793d1e94ccb82ae0b}} 
+\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&)=delete
+\item 
+unsigned int \mbox{\hyperlink{classrender_1_1index__buffer_a7cd3e81aea399ec5fd8436646264394c}{get\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество элементов в буфере \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Буфер индексов вершин шейдера Данный класс является оболочкой gl-\/структуры, отвечающей за хранение номеров вершин для отрисовки в определенном порядке 
+
+\begin{DoxyNote}{Заметки}
+Класс работает только с массивами данных типа unsigned int 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1index__buffer_a2424a8ec6cab19b71763c6539086b30c}\label{classrender_1_1index__buffer_a2424a8ec6cab19b71763c6539086b30c}} 
+\index{render::index\_buffer@{render::index\_buffer}!index\_buffer@{index\_buffer}}
+\index{index\_buffer@{index\_buffer}!render::index\_buffer@{render::index\_buffer}}
+\doxysubsubsection{\texorpdfstring{index\_buffer()}{index\_buffer()}}
+{\footnotesize\ttfamily render\+::index\+\_\+buffer\+::index\+\_\+buffer (\begin{DoxyParamCaption}\item[{const unsigned int}]{count,  }\item[{const unsigned int $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Инициализация 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em count} & количество элементов в массиве \\
+\hline
+{\em data} & указатель на элементы массива \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1index__buffer_a7cd3e81aea399ec5fd8436646264394c}\label{classrender_1_1index__buffer_a7cd3e81aea399ec5fd8436646264394c}} 
+\index{render::index\_buffer@{render::index\_buffer}!get\_count@{get\_count}}
+\index{get\_count@{get\_count}!render::index\_buffer@{render::index\_buffer}}
+\doxysubsubsection{\texorpdfstring{get\_count()}{get\_count()}}
+{\footnotesize\ttfamily unsigned int render\+::index\+\_\+buffer\+::get\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает количество элементов в буфере 
+
+\begin{DoxyReturn}{Возвращает}
+Количество элементов в буфере 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1index__buffer_a1fc6c9f8011af89a586250ccc2d047fe}\label{classrender_1_1index__buffer_a1fc6c9f8011af89a586250ccc2d047fe}} 
+\index{render::index\_buffer@{render::index\_buffer}!restore@{restore}}
+\index{restore@{restore}!render::index\_buffer@{render::index\_buffer}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily void render\+::index\+\_\+buffer\+::restore (\begin{DoxyParamCaption}\item[{const unsigned int}]{count,  }\item[{const unsigned int $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Перезагрузка буфера Сбрасывает массив данных в буфере и создает новый, заполняя его новыми данными. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em count} & количество элементов в массиве \\
+\hline
+{\em data} & указатель на элементы массива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Данные data могут быть удалены после использования 
+
+Буфер автоматически выполняет команду \mbox{\hyperlink{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}{render\+::index\+\_\+buffer\+::bind()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}{render\+::index\+\_\+buffer\+::bind()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classrender_1_1index__buffer_a7229c5e05b610a0ef5065c8477a8b2f0}\label{classrender_1_1index__buffer_a7229c5e05b610a0ef5065c8477a8b2f0}} 
+\index{render::index\_buffer@{render::index\_buffer}!update@{update}}
+\index{update@{update}!render::index\_buffer@{render::index\_buffer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void render\+::index\+\_\+buffer\+::update (\begin{DoxyParamCaption}\item[{const unsigned int}]{count,  }\item[{const unsigned int $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Изменение буфера Перезаписывает данные буфера, начиная с первого элемента массива новыми данными. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em count} & количество элементов в массиве \\
+\hline
+{\em data} & указатель на элементы массива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Данные data могут быть удалены после использования 
+
+Буфер автоматически выполняет команду \mbox{\hyperlink{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}{render\+::index\+\_\+buffer\+::bind()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1index__buffer_a82e1dae0419e8ee622139581e5030a64}{render\+::index\+\_\+buffer\+::bind()}} 
+\end{DoxySeeAlso}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/index\+\_\+buffer.\+h\end{DoxyCompactItemize}

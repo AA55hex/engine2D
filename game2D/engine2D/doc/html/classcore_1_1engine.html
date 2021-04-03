@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Класс core::engine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classcore_1_1engine.html">engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classcore_1_1engine-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс core::engine</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame. На данный момент является полностью статическим и поддерживает одновременную работу только с одним объектом игры.  
+ <a href="classcore_1_1engine.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="engine_8h_source.html">engine.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a32578b3553feddfd8821718fc2ab2b8d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d">inicialize</a> (int width, int height, std::string title, bool gl_debug=false)</td></tr>
+<tr class="memdesc:a32578b3553feddfd8821718fc2ab2b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов. При отсутствии инициализации большая часть структур библиотеки будует возвращать исключание. При работе возвращает log-и событий.  <a href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a32578b3553feddfd8821718fc2ab2b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b4362ceb99637f7e9ff52ae146e8d5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1engine.html#a35b4362ceb99637f7e9ff52ae146e8d5">dispose</a> ()</td></tr>
+<tr class="memdesc:a35b4362ceb99637f7e9ff52ae146e8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождение ресурсов движка  <a href="classcore_1_1engine.html#a35b4362ceb99637f7e9ff52ae146e8d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a35b4362ceb99637f7e9ff52ae146e8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0b02329b3319972a33882a63f4f96e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1engine.html#afb0b02329b3319972a33882a63f4f96e">is_inicialized</a> ()</td></tr>
+<tr class="memdesc:afb0b02329b3319972a33882a63f4f96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние инициализации движка  <a href="classcore_1_1engine.html#afb0b02329b3319972a33882a63f4f96e">Подробнее...</a><br /></td></tr>
+<tr class="separator:afb0b02329b3319972a33882a63f4f96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad728463058698a2019e62680b022efdb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1engine.html#ad728463058698a2019e62680b022efdb">play</a> (<a class="el" href="classcore_1_1igame.html">igame</a> &amp;game)</td></tr>
+<tr class="memdesc:ad728463058698a2019e62680b022efdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запуск цикла игры Сначала происходит разовая поптыка инициализации игры, если она не была произведена. Цикл состоит из следующих этапов этапов:  <a href="classcore_1_1engine.html#ad728463058698a2019e62680b022efdb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad728463058698a2019e62680b022efdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a4aa1002806b2fb0f76703aa3de293b8a"><td class="memItemLeft" align="right" valign="top"><a id="a4aa1002806b2fb0f76703aa3de293b8a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>sound::sound_buffer</b></td></tr>
+<tr class="separator:a4aa1002806b2fb0f76703aa3de293b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04de74791b0f840481b65078e328271"><td class="memItemLeft" align="right" valign="top"><a id="af04de74791b0f840481b65078e328271"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>input::input_manager</b></td></tr>
+<tr class="separator:af04de74791b0f840481b65078e328271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f2d3b10b944e87f576556dcebe98ba"><td class="memItemLeft" align="right" valign="top"><a id="ae4f2d3b10b944e87f576556dcebe98ba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sound::audio_callback</b> (void *, Uint8 *stream, int len)</td></tr>
+<tr class="separator:ae4f2d3b10b944e87f576556dcebe98ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame. На данный момент является полностью статическим и поддерживает одновременную работу только с одним объектом игры. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Перед обращением к каким-либо структурам библиотеки, загрузите все ресурсы с помощью данного класса. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcore_1_1engine.html#a32578b3553feddfd8821718fc2ab2b8d" title="Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов....">engine::inicialize</a>(int width, int height, std::string title, bool gl_debug = false) </dd>
+<dd>
+<a class="el" href="classcore_1_1igame.html" title="igame - интерфейс взаимодействия с классом engine.">igame</a> </dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a35b4362ceb99637f7e9ff52ae146e8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b4362ceb99637f7e9ff52ae146e8d5">&#9670;&nbsp;</a></span>dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void core::engine::dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Освобождение ресурсов движка </p>
+<dl class="section note"><dt>Заметки</dt><dd>Если не была проведена инициализация, в log-и выведется соответствующее сообщение </dd></dl>
+
+</div>
+</div>
+<a id="a32578b3553feddfd8821718fc2ab2b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32578b3553feddfd8821718fc2ab2b8d">&#9670;&nbsp;</a></span>inicialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool core::engine::inicialize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gl_debug</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов. При отсутствии инициализации большая часть структур библиотеки будует возвращать исключание. При работе возвращает log-и событий. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>ширина окна </td></tr>
+    <tr><td class="paramname">height</td><td>высота окна </td></tr>
+    <tr><td class="paramname">title</td><td>заголовок окна </td></tr>
+    <tr><td class="paramname">gl_debug</td><td>true - использовать debug-контекст окна </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - успешная инициализация, false - инициализация прервана </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>При неудачной инициализации обратите внимание на полученные log-и </dd></dl>
+
+</div>
+</div>
+<a id="afb0b02329b3319972a33882a63f4f96e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0b02329b3319972a33882a63f4f96e">&#9670;&nbsp;</a></span>is_inicialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool core::engine::is_inicialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Состояние инициализации движка </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true - ресурсы загружены </dd></dl>
+
+</div>
+</div>
+<a id="ad728463058698a2019e62680b022efdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad728463058698a2019e62680b022efdb">&#9670;&nbsp;</a></span>play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void core::engine::play </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcore_1_1igame.html">igame</a> &amp;&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запуск цикла игры Сначала происходит разовая поптыка инициализации игры, если она не была произведена. Цикл состоит из следующих этапов этапов: </p>
+<ul>
+<li>четние событий ввода</li>
+<li>изменение данных игрового мира</li>
+<li>подготовка видео-буфера к заполнению</li>
+<li>обработка звука и изображения для нового кадра</li>
+<li>переключение видео-буфера. <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>объект игрового мира </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Всегда используйте данный метод как основной игровой цикл. В ином случае у вас не будет доступа к переключению виде-буфера </dd>
+<dd>
+Цикл останавливается, когда функция <a class="el" href="classcore_1_1igame.html#a2a94fc10f0604fd971fe35511c4177eb" title="Указывает на состояние игры">igame::is_playing()</a> возвращает false; </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcore_1_1igame.html#a2a94fc10f0604fd971fe35511c4177eb" title="Указывает на состояние игры">igame::is_playing()</a> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/core/<a class="el" href="engine_8h_source.html">engine.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Класс render::texture2D</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>render</b></li><li class="navelem"><a class="el" href="classrender_1_1texture2D.html">texture2D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classrender_1_1texture2D-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс render::texture2D</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс-текстура Представляет собой абстракцию загруженой gl-текстуры.  
+ <a href="classrender_1_1texture2D.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="texture2D_8h_source.html">texture2D.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a237a59b5b79b7e2dd2361c5bbc94a3b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">texture2D</a> (int width, int height, const void *data, color_format format, const GLenum filter=GL_LINEAR, const GLenum wrapMode=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="memdesc:a237a59b5b79b7e2dd2361c5bbc94a3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация текстуры  <a href="classrender_1_1texture2D.html#a237a59b5b79b7e2dd2361c5bbc94a3b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a237a59b5b79b7e2dd2361c5bbc94a3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1936043deca3a8d0519d5e0ef56ea39"><td class="memItemLeft" align="right" valign="top"><a id="ab1936043deca3a8d0519d5e0ef56ea39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#ab1936043deca3a8d0519d5e0ef56ea39">bind</a> () const</td></tr>
+<tr class="memdesc:ab1936043deca3a8d0519d5e0ef56ea39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сделать текстуру активной Привязывает текстуру к активному текстурному буферу. Одновременно один текстурный буфер может содержать одну текстуру <br /></td></tr>
+<tr class="separator:ab1936043deca3a8d0519d5e0ef56ea39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df0736a80386c990dedade87ca43b87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#a9df0736a80386c990dedade87ca43b87">get_width</a> () const</td></tr>
+<tr class="memdesc:a9df0736a80386c990dedade87ca43b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат ширины текстуры  <a href="classrender_1_1texture2D.html#a9df0736a80386c990dedade87ca43b87">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9df0736a80386c990dedade87ca43b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86c1fb536bbaa03f18b88ba86df8d13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#af86c1fb536bbaa03f18b88ba86df8d13">get_height</a> () const</td></tr>
+<tr class="memdesc:af86c1fb536bbaa03f18b88ba86df8d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат высоты текстуры  <a href="classrender_1_1texture2D.html#af86c1fb536bbaa03f18b88ba86df8d13">Подробнее...</a><br /></td></tr>
+<tr class="separator:af86c1fb536bbaa03f18b88ba86df8d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab688f5acb2c87de55b4815e837c01451"><td class="memItemLeft" align="right" valign="top"><a id="ab688f5acb2c87de55b4815e837c01451"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>texture2D</b> (<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;&amp;)</td></tr>
+<tr class="separator:ab688f5acb2c87de55b4815e837c01451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940c79ab65a4bbb70cb4f68a199b0cfa"><td class="memItemLeft" align="right" valign="top"><a id="a940c79ab65a4bbb70cb4f68a199b0cfa"></a>
+<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;&amp;)</td></tr>
+<tr class="separator:a940c79ab65a4bbb70cb4f68a199b0cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e8c9449f8898b7883e6b08aff263c3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#a69e8c9449f8898b7883e6b08aff263c3">add_subtexture</a> (std::string key, const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> &amp;subtexture)</td></tr>
+<tr class="memdesc:a69e8c9449f8898b7883e6b08aff263c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление подтекстуры из текстуры. Добавляет координаты подтекстуры в хранилище подтекстур объекта.  <a href="classrender_1_1texture2D.html#a69e8c9449f8898b7883e6b08aff263c3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a69e8c9449f8898b7883e6b08aff263c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c94ed1a004b771fa8cb5ba27382ee37"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#a4c94ed1a004b771fa8cb5ba27382ee37">add_subtexture</a> (std::string key, glm::vec2 left_bottom, glm::vec2 right_top)</td></tr>
+<tr class="memdesc:a4c94ed1a004b771fa8cb5ba27382ee37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление подтекстуры из текстуры.  <a href="classrender_1_1texture2D.html#a4c94ed1a004b771fa8cb5ba27382ee37">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4c94ed1a004b771fa8cb5ba27382ee37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efaec6e360f0151da88702364b6fe83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#a2efaec6e360f0151da88702364b6fe83">get_subtexture</a> (std::string key) const</td></tr>
+<tr class="memdesc:a2efaec6e360f0151da88702364b6fe83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат подтекстуры Ищет подтекстуру объекта по её имени.  <a href="classrender_1_1texture2D.html#a2efaec6e360f0151da88702364b6fe83">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2efaec6e360f0151da88702364b6fe83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbb0ed3baad001aa467536caf81cee4"><td class="memItemLeft" align="right" valign="top"><a id="a4dbb0ed3baad001aa467536caf81cee4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>texture2D</b> (<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;)=delete</td></tr>
+<tr class="separator:a4dbb0ed3baad001aa467536caf81cee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab218f9bb03e4cff06d3a0115cd4cd3"><td class="memItemLeft" align="right" valign="top"><a id="aaab218f9bb03e4cff06d3a0115cd4cd3"></a>
+<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classrender_1_1texture2D.html">texture2D</a> &amp;)=delete</td></tr>
+<tr class="separator:aaab218f9bb03e4cff06d3a0115cd4cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ab242dbafa6f1cd0140d49079c464e064"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1texture2D.html#ab242dbafa6f1cd0140d49079c464e064">active_texture</a> (unsigned int offset)</td></tr>
+<tr class="memdesc:ab242dbafa6f1cd0140d49079c464e064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активировать буфер текстуры Активирует текстурный буфер по его номеру. Текстурный буфер используется для привязки текстуры к нему.  <a href="classrender_1_1texture2D.html#ab242dbafa6f1cd0140d49079c464e064">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab242dbafa6f1cd0140d49079c464e064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс-текстура Представляет собой абстракцию загруженой gl-текстуры. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Координаты текстур нормализованы по диапазону [0;1]. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a237a59b5b79b7e2dd2361c5bbc94a3b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237a59b5b79b7e2dd2361c5bbc94a3b8">&#9670;&nbsp;</a></span>texture2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">render::texture2D::texture2D </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color_format&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLenum&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>GL_LINEAR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLenum&#160;</td>
+          <td class="paramname"><em>wrapMode</em> = <code>GL_CLAMP_TO_EDGE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация текстуры </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>ширина текстуры </td></tr>
+    <tr><td class="paramname">height</td><td>высота текстуры </td></tr>
+    <tr><td class="paramname">data</td><td>указатель на данные текстуры </td></tr>
+    <tr><td class="paramname">format</td><td>цветовая модель </td></tr>
+    <tr><td class="paramname">filter</td><td>режим фильтрации текстуры при рендере </td></tr>
+    <tr><td class="paramname">wrapMode</td><td>поведение текстуры при отрисовке </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab242dbafa6f1cd0140d49079c464e064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab242dbafa6f1cd0140d49079c464e064">&#9670;&nbsp;</a></span>active_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void render::texture2D::active_texture </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Активировать буфер текстуры Активирует текстурный буфер по его номеру. Текстурный буфер используется для привязки текстуры к нему. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Одновременно может быть активнен только один текстурный буфер. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>индекс текстурного буфера. Максимальный диапазон [0;31]. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a69e8c9449f8898b7883e6b08aff263c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e8c9449f8898b7883e6b08aff263c3">&#9670;&nbsp;</a></span>add_subtexture() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; render::texture2D::add_subtexture </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> &amp;&#160;</td>
+          <td class="paramname"><em>subtexture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление подтекстуры из текстуры. Добавляет координаты подтекстуры в хранилище подтекстур объекта. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Координаты текстур нормализованы по диапазону [0;1]. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>имя подтекстуры </td></tr>
+    <tr><td class="paramname">subtexture</td><td>описатель области подтекстуры </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Созданная подтекстура </dd></dl>
+
+</div>
+</div>
+<a id="a4c94ed1a004b771fa8cb5ba27382ee37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c94ed1a004b771fa8cb5ba27382ee37">&#9670;&nbsp;</a></span>add_subtexture() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; render::texture2D::add_subtexture </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>left_bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>right_top</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление подтекстуры из текстуры. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Координаты текстур нормализованы по диапазону [0;1]. Начало координатной плоскости (0;0) находится в левом нижнем углу окна. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>имя подтекстуры </td></tr>
+    <tr><td class="paramname">left_bottom</td><td>левый нижний угол подтекстуры </td></tr>
+    <tr><td class="paramname">right_top</td><td>правый верхний угол подтекстуры </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Созданная подтекстура </dd></dl>
+
+</div>
+</div>
+<a id="af86c1fb536bbaa03f18b88ba86df8d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86c1fb536bbaa03f18b88ba86df8d13">&#9670;&nbsp;</a></span>get_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int render::texture2D::get_height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат высоты текстуры </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Высота текстуры </dd></dl>
+
+</div>
+</div>
+<a id="a2efaec6e360f0151da88702364b6fe83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efaec6e360f0151da88702364b6fe83">&#9670;&nbsp;</a></span>get_subtexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; render::texture2D::get_subtexture </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат подтекстуры Ищет подтекстуру объекта по её имени. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>имя подтекстуры </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Подтекстура объекта. Если подтекстура не найдена, возвращается вся текстура </dd></dl>
+
+</div>
+</div>
+<a id="a9df0736a80386c990dedade87ca43b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df0736a80386c990dedade87ca43b87">&#9670;&nbsp;</a></span>get_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int render::texture2D::get_width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат ширины текстуры </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ширина текстуры </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/render/<a class="el" href="texture2D_8h_source.html">texture2D.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

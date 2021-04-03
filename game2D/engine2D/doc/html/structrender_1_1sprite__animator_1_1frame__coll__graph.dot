@@ -1,0 +1,9 @@
+digraph "render::sprite_animator::frame"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="render::sprite_animator\l::frame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Фрейм анимации Воспомогательная структура, согласно которой отрисовывается спрайт"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" discriptor" ,fontname="Helvetica"];
+  Node2 [label="render::frame_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrender_1_1frame__descriptor.html",tooltip="Описатель области текстуры или текстурного атласа"];
+}

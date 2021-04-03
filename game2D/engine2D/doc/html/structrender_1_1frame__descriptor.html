@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Структура render::frame_descriptor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>render</b></li><li class="navelem"><a class="el" href="structrender_1_1frame__descriptor.html">frame_descriptor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structrender_1_1frame__descriptor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура render::frame_descriptor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Описатель области текстуры или текстурного атласа  
+ <a href="structrender_1_1frame__descriptor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="frame__structures_8h_source.html">frame_structures.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a1c849b62fb7925f613130a43a0fa955e"><td class="memItemLeft" align="right" valign="top"><a id="a1c849b62fb7925f613130a43a0fa955e"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrender_1_1frame__descriptor.html#a1c849b62fb7925f613130a43a0fa955e">left_bottom_uv</a> {0.f}</td></tr>
+<tr class="memdesc:a1c849b62fb7925f613130a43a0fa955e"><td class="mdescLeft">&#160;</td><td class="mdescRight">координата левого нижнего угла области <br /></td></tr>
+<tr class="separator:a1c849b62fb7925f613130a43a0fa955e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11706d1fac5cc42d09529524ce418428"><td class="memItemLeft" align="right" valign="top"><a id="a11706d1fac5cc42d09529524ce418428"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrender_1_1frame__descriptor.html#a11706d1fac5cc42d09529524ce418428">right_top_uv</a> {1.f}</td></tr>
+<tr class="memdesc:a11706d1fac5cc42d09529524ce418428"><td class="mdescLeft">&#160;</td><td class="mdescRight">координата правого верхнего угла области <br /></td></tr>
+<tr class="separator:a11706d1fac5cc42d09529524ce418428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Описатель области текстуры или текстурного атласа </p>
+<dl class="section note"><dt>Заметки</dt><dd>Координаты текстур задаются диапазоном [0;1]. Начало системы координат находится в левом нижнем углу окна. </dd></dl>
+</div><hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>include/render/<a class="el" href="frame__structures_8h_source.html">frame_structures.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

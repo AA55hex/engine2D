@@ -1,0 +1,289 @@
+\hypertarget{classresources_1_1resource__manager}{}\doxysection{Класс resources\+::resource\+\_\+manager}
+\label{classresources_1_1resource__manager}\index{resources::resource\_manager@{resources::resource\_manager}}
+
+
+Менеджер ресурсов Представляет собой абстракцию менеджера по загрузке и хранению подгружаемых ресурсов, таких, как текстуры, спрайты, звуки и т.\+д. Изначально содержит интерфейс по загрузке и хранению всех примитивов библиотеки. При необходимости, можно создать дочерний класс и дополнить его интерфейсом хранения и загрузки игровых объектов.  
+
+
+
+
+{\ttfamily \#include $<$resource\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classresources_1_1resource__manager_a0ef32a66d836b4e2011dd5bd8c405368}{resource\+\_\+manager}} (const std\+::string \&dir\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Инициализация менеджера ресурсов \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classresources_1_1resource__manager_a267d0680565c926c8f53f3fb840d7837}{reset\+\_\+path}} (const std\+::string \&dir\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Изменение директории ресурсов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classresources_1_1resource__manager_aeafcf7ab26fc795a14045e9cec60718f}\label{classresources_1_1resource__manager_aeafcf7ab26fc795a14045e9cec60718f}} 
+{\bfseries resource\+\_\+manager} (\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \&\&)
+\item 
+\mbox{\Hypertarget{classresources_1_1resource__manager_a86852ec2b04712e5393450b8b68d021e}\label{classresources_1_1resource__manager_a86852ec2b04712e5393450b8b68d021e}} 
+\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \& {\bfseries operator=} (\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \&\&)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1shader__program}{render\+::shader\+\_\+program}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a47ac70e2a24ca06fa2e59223ae4d5e4a}{load\+\_\+shader\+\_\+program}} (const std\+::string \&prg\+\_\+name, const std\+::string \&vert\+\_\+path, const std\+::string \&frag\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Загрузка шейдерной программы, используя GLSL-\/шейдеры вершинного и фрагментного типа из файла. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1shader__program}{render\+::shader\+\_\+program}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_aac139c6bc28641dde6493abe80454d6f}{get\+\_\+shader\+\_\+program}} (const std\+::string \&prg\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Возврат шейдерной программы по имени Возвращает шейдерную программу из списка загруженных программ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a0e44506a2e3a9d238bee71acda5162f4}{load\+\_\+texture2D}} (const std\+::string \&texture\+\_\+name, const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Загрузка 2D-\/текстуры из файла \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a5d0beb7c9c85474afe309e12fe360a00}{get\+\_\+texture2D}} (const std\+::string \&texture\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Возврат загруженной текстуры по имени \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a077a62430687d7632dcacbcb9b2d4a64}{load\+\_\+texture\+\_\+atlas2D}} (const std\+::string \&texture\+\_\+name, const std\+::string \&filepath, std\+::vector$<$ std\+::string $>$ subtexture\+\_\+names, unsigned int frame\+\_\+width, unsigned int frame\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Загрузка текстурного атласа из файла Загружает текстуру, представляющую собой текстурный атлас, создавая подтекстуры равного размера с указанными именами \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1sprite2D}{render\+::sprite2D}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_af9877e5d469e2b591b9fb4a6c9d4dfb5}{load\+\_\+sprite}} (const std\+::string \&sprite\+\_\+name, const std\+::string \&texture, const std\+::string \&program, const std\+::string \&subtexture=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Загрузка спрайта из загруженных ресурсов Создает спрайт на основе уже загруженной текстуры и программы \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1sprite2D}{render\+::sprite2D}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_af3041c905c5d4032e5e2ceaca8221d37}{get\+\_\+sprite}} (const std\+::string \&sprite\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Возврат загруденного спрайта по имени \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsound_1_1wav__sound}{sound\+::wav\+\_\+sound}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a3c634d778a2066a108aa8498bb045500}{load\+\_\+wav}} (const std\+::string \&wav\+\_\+name, const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Загрузка wav-\/звука из файла \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsound_1_1wav__sound}{sound\+::wav\+\_\+sound}} $>$ \mbox{\hyperlink{classresources_1_1resource__manager_a3ca07285237e8d5c8050a7269dc2435f}{get\+\_\+wav}} (const std\+::string \&wav\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Возврат загруженного звука \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classresources_1_1resource__manager_a0f30a38b87e94f05cd89096721d40896}\label{classresources_1_1resource__manager_a0f30a38b87e94f05cd89096721d40896}} 
+{\bfseries resource\+\_\+manager} (\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classresources_1_1resource__manager_a4c1ebf9ad5fd2ebbbab3af58a11bd391}\label{classresources_1_1resource__manager_a4c1ebf9ad5fd2ebbbab3af58a11bd391}} 
+\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \& {\bfseries operator=} (\mbox{\hyperlink{classresources_1_1resource__manager}{resource\+\_\+manager}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Менеджер ресурсов Представляет собой абстракцию менеджера по загрузке и хранению подгружаемых ресурсов, таких, как текстуры, спрайты, звуки и т.\+д. Изначально содержит интерфейс по загрузке и хранению всех примитивов библиотеки. При необходимости, можно создать дочерний класс и дополнить его интерфейсом хранения и загрузки игровых объектов. 
+
+\begin{DoxyNote}{Заметки}
+Выводит логи в процессе создания/загрузки/возврата ресурса. 
+
+Каождый объект имеет свой список ресурсов 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a0ef32a66d836b4e2011dd5bd8c405368}\label{classresources_1_1resource__manager_a0ef32a66d836b4e2011dd5bd8c405368}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!resource\_manager@{resource\_manager}}
+\index{resource\_manager@{resource\_manager}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{resource\_manager()}{resource\_manager()}}
+{\footnotesize\ttfamily resources\+::resource\+\_\+manager\+::resource\+\_\+manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Инициализация менеджера ресурсов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dir\+\_\+path} & путь к директории ресурсов \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classresources_1_1resource__manager_aac139c6bc28641dde6493abe80454d6f}\label{classresources_1_1resource__manager_aac139c6bc28641dde6493abe80454d6f}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!get\_shader\_program@{get\_shader\_program}}
+\index{get\_shader\_program@{get\_shader\_program}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_shader\_program()}{get\_shader\_program()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1shader__program}{render\+::shader\+\_\+program}}$>$ resources\+::resource\+\_\+manager\+::get\+\_\+shader\+\_\+program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prg\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Возврат шейдерной программы по имени Возвращает шейдерную программу из списка загруженных программ 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em имя,идентифицирующее} & объект \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Искомый объект, nullptr -\/ объект не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_af3041c905c5d4032e5e2ceaca8221d37}\label{classresources_1_1resource__manager_af3041c905c5d4032e5e2ceaca8221d37}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!get\_sprite@{get\_sprite}}
+\index{get\_sprite@{get\_sprite}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_sprite()}{get\_sprite()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1sprite2D}{render\+::sprite2D}}$>$ resources\+::resource\+\_\+manager\+::get\+\_\+sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sprite\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Возврат загруденного спрайта по имени 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sprite\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Искомый объект, nullptr -\/ объект не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a5d0beb7c9c85474afe309e12fe360a00}\label{classresources_1_1resource__manager_a5d0beb7c9c85474afe309e12fe360a00}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!get\_texture2D@{get\_texture2D}}
+\index{get\_texture2D@{get\_texture2D}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_texture2D()}{get\_texture2D()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}}$>$ resources\+::resource\+\_\+manager\+::get\+\_\+texture2D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Возврат загруженной текстуры по имени 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em texture\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Искомый объект, nullptr -\/ объект не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a3ca07285237e8d5c8050a7269dc2435f}\label{classresources_1_1resource__manager_a3ca07285237e8d5c8050a7269dc2435f}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!get\_wav@{get\_wav}}
+\index{get\_wav@{get\_wav}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_wav()}{get\_wav()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsound_1_1wav__sound}{sound\+::wav\+\_\+sound}}$>$ resources\+::resource\+\_\+manager\+::get\+\_\+wav (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{wav\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Возврат загруженного звука 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em wav\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Искомый объект, nullptr -\/ объект не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a47ac70e2a24ca06fa2e59223ae4d5e4a}\label{classresources_1_1resource__manager_a47ac70e2a24ca06fa2e59223ae4d5e4a}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!load\_shader\_program@{load\_shader\_program}}
+\index{load\_shader\_program@{load\_shader\_program}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{load\_shader\_program()}{load\_shader\_program()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1shader__program}{render\+::shader\+\_\+program}}$>$ resources\+::resource\+\_\+manager\+::load\+\_\+shader\+\_\+program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prg\+\_\+name,  }\item[{const std\+::string \&}]{vert\+\_\+path,  }\item[{const std\+::string \&}]{frag\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Загрузка шейдерной программы, используя GLSL-\/шейдеры вершинного и фрагментного типа из файла. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em prg\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+{\em vert\+\_\+path} & относительный путь к вершинному шейдеру \\
+\hline
+{\em frag\+\_\+path} & относительный путь к фрагментному шейдеру \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Загруженная шейдерная программа 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Программа создается даже в случае неудачной компиляции 
+\end{DoxyNote}
+\mbox{\Hypertarget{classresources_1_1resource__manager_af9877e5d469e2b591b9fb4a6c9d4dfb5}\label{classresources_1_1resource__manager_af9877e5d469e2b591b9fb4a6c9d4dfb5}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!load\_sprite@{load\_sprite}}
+\index{load\_sprite@{load\_sprite}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{load\_sprite()}{load\_sprite()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1sprite2D}{render\+::sprite2D}}$>$ resources\+::resource\+\_\+manager\+::load\+\_\+sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sprite\+\_\+name,  }\item[{const std\+::string \&}]{texture,  }\item[{const std\+::string \&}]{program,  }\item[{const std\+::string \&}]{subtexture = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Загрузка спрайта из загруженных ресурсов Создает спрайт на основе уже загруженной текстуры и программы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sprite\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+{\em texture} & имя загруденной текстуры \\
+\hline
+{\em program} & имя загруженной шейдерной программы \\
+\hline
+{\em subtexture} & имя подтекстуры для инициализации спрайта \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Созданный спрайт, nullptr -\/ объект не загружен 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a0e44506a2e3a9d238bee71acda5162f4}\label{classresources_1_1resource__manager_a0e44506a2e3a9d238bee71acda5162f4}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!load\_texture2D@{load\_texture2D}}
+\index{load\_texture2D@{load\_texture2D}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{load\_texture2D()}{load\_texture2D()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}}$>$ resources\+::resource\+\_\+manager\+::load\+\_\+texture2D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+\_\+name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Загрузка 2D-\/текстуры из файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em texture\+\_\+name} & мя, идентифицирующее объект \\
+\hline
+{\em filepath} & относительный путь к текстуре \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Загруженная тексткура, nullptr -\/ объект не загружен 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a077a62430687d7632dcacbcb9b2d4a64}\label{classresources_1_1resource__manager_a077a62430687d7632dcacbcb9b2d4a64}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!load\_texture\_atlas2D@{load\_texture\_atlas2D}}
+\index{load\_texture\_atlas2D@{load\_texture\_atlas2D}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{load\_texture\_atlas2D()}{load\_texture\_atlas2D()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}}$>$ resources\+::resource\+\_\+manager\+::load\+\_\+texture\+\_\+atlas2D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+\_\+name,  }\item[{const std\+::string \&}]{filepath,  }\item[{std\+::vector$<$ std\+::string $>$}]{subtexture\+\_\+names,  }\item[{unsigned int}]{frame\+\_\+width,  }\item[{unsigned int}]{frame\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Загрузка текстурного атласа из файла Загружает текстуру, представляющую собой текстурный атлас, создавая подтекстуры равного размера с указанными именами 
+
+\begin{DoxyNote}{Заметки}
+Текстуры и текстурные атласы хранятся совместно 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em texture\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+{\em filepath} & пкть к текстуре \\
+\hline
+{\em subtexture\+\_\+names} & Имена для ижентификации подтекстур \\
+\hline
+{\em frame\+\_\+width} & Ширина подтекстуры \\
+\hline
+{\em frame\+\_\+height} & Высота подтекстуры \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Загруденный текстурный атлас, nullptr -\/ объект не загружен 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a3c634d778a2066a108aa8498bb045500}\label{classresources_1_1resource__manager_a3c634d778a2066a108aa8498bb045500}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!load\_wav@{load\_wav}}
+\index{load\_wav@{load\_wav}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{load\_wav()}{load\_wav()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsound_1_1wav__sound}{sound\+::wav\+\_\+sound}}$>$ resources\+::resource\+\_\+manager\+::load\+\_\+wav (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{wav\+\_\+name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Загрузка wav-\/звука из файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em wav\+\_\+name} & имя, идентифицирующее объект \\
+\hline
+{\em filepath} & относительный путь к wav-\/файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Загруденный звук, nullptr -\/ объект не загружен 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classresources_1_1resource__manager_a267d0680565c926c8f53f3fb840d7837}\label{classresources_1_1resource__manager_a267d0680565c926c8f53f3fb840d7837}} 
+\index{resources::resource\_manager@{resources::resource\_manager}!reset\_path@{reset\_path}}
+\index{reset\_path@{reset\_path}!resources::resource\_manager@{resources::resource\_manager}}
+\doxysubsubsection{\texorpdfstring{reset\_path()}{reset\_path()}}
+{\footnotesize\ttfamily void resources\+::resource\+\_\+manager\+::reset\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Изменение директории ресурсов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dir\+\_\+path} & путь к директории ресурсов \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/resources/resource\+\_\+manager.\+h\end{DoxyCompactItemize}

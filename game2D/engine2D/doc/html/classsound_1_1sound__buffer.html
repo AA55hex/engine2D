@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Класс sound::sound_buffer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sound</b></li><li class="navelem"><a class="el" href="classsound_1_1sound__buffer.html">sound_buffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classsound_1_1sound__buffer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс sound::sound_buffer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек. Могут использоваться для сохранения состояний нескольких звуковых дорожек одновременно. Активным может быть только один буфер, в то время как остальные замораживают свой звуковой поток.  
+ <a href="classsound_1_1sound__buffer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sound__buffer_8h_source.html">sound_buffer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:aa00ad3149fd0e78f81785c5c17ce6d2a"><td class="memItemLeft" align="right" valign="top"><a id="aa00ad3149fd0e78f81785c5c17ce6d2a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>playback_ptr</b> = std::shared_ptr&lt; <a class="el" href="structsound_1_1wav__sound_1_1playback.html">wav_sound::playback</a> &gt;</td></tr>
+<tr class="separator:aa00ad3149fd0e78f81785c5c17ce6d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afc9e871ae9265f211c32f53664777cbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">sound_buffer</a> (int silence=0)</td></tr>
+<tr class="memdesc:afc9e871ae9265f211c32f53664777cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация звукового буфера с заданием тишины  <a href="classsound_1_1sound__buffer.html#afc9e871ae9265f211c32f53664777cbc">Подробнее...</a><br /></td></tr>
+<tr class="separator:afc9e871ae9265f211c32f53664777cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264b6870c19b474c1f2dd2678f4b431b"><td class="memItemLeft" align="right" valign="top"><a id="a264b6870c19b474c1f2dd2678f4b431b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#a264b6870c19b474c1f2dd2678f4b431b">use</a> ()</td></tr>
+<tr class="memdesc:a264b6870c19b474c1f2dd2678f4b431b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активация звукового буфера Делает буфер активным, проигрывая его массив звуков <br /></td></tr>
+<tr class="separator:a264b6870c19b474c1f2dd2678f4b431b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926d69368653745efbc21491167d4d70"><td class="memItemLeft" align="right" valign="top"><a id="a926d69368653745efbc21491167d4d70"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#a926d69368653745efbc21491167d4d70">detach</a> ()</td></tr>
+<tr class="memdesc:a926d69368653745efbc21491167d4d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деактивация звукового буфера <br /></td></tr>
+<tr class="separator:a926d69368653745efbc21491167d4d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832efbb2785af43aa409b4a9f687a48c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#a832efbb2785af43aa409b4a9f687a48c">push_playback</a> (playback_ptr playback)</td></tr>
+<tr class="memdesc:a832efbb2785af43aa409b4a9f687a48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет проигрываемую дорожку в конец списка  <a href="classsound_1_1sound__buffer.html#a832efbb2785af43aa409b4a9f687a48c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a832efbb2785af43aa409b4a9f687a48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44db890cb15f02fd109cac7024ab233e"><td class="memItemLeft" align="right" valign="top"><a id="a44db890cb15f02fd109cac7024ab233e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#a44db890cb15f02fd109cac7024ab233e">clear</a> ()</td></tr>
+<tr class="memdesc:a44db890cb15f02fd109cac7024ab233e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очищает звуковой поток <br /></td></tr>
+<tr class="separator:a44db890cb15f02fd109cac7024ab233e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a4bdc78b5041a25681a26a584ed78b75d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsound_1_1sound__buffer.html">sound_buffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsound_1_1sound__buffer.html#a4bdc78b5041a25681a26a584ed78b75d">current</a> ()</td></tr>
+<tr class="memdesc:a4bdc78b5041a25681a26a584ed78b75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат активного звукового буфера  <a href="classsound_1_1sound__buffer.html#a4bdc78b5041a25681a26a584ed78b75d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4bdc78b5041a25681a26a584ed78b75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a579ba4274b6cb43899b8b2ff961b7de7"><td class="memItemLeft" align="right" valign="top"><a id="a579ba4274b6cb43899b8b2ff961b7de7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>audio_callback</b> (void *userdata, Uint8 *stream, int len)</td></tr>
+<tr class="separator:a579ba4274b6cb43899b8b2ff961b7de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек. Могут использоваться для сохранения состояний нескольких звуковых дорожек одновременно. Активным может быть только один буфер, в то время как остальные замораживают свой звуковой поток. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="afc9e871ae9265f211c32f53664777cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9e871ae9265f211c32f53664777cbc">&#9670;&nbsp;</a></span>sound_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sound::sound_buffer::sound_buffer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>silence</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация звукового буфера с заданием тишины </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">silence</td><td>амплитуда тишины </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Тишина будет проигрываться каждый раз, когда буфер окажется пустым </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a4bdc78b5041a25681a26a584ed78b75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdc78b5041a25681a26a584ed78b75d">&#9670;&nbsp;</a></span>current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classsound_1_1sound__buffer.html">sound_buffer</a>* sound::sound_buffer::current </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат активного звукового буфера </p>
+<dl class="section return"><dt>Возвращает</dt><dd>активный звуковой буфер </dd></dl>
+
+</div>
+</div>
+<a id="a832efbb2785af43aa409b4a9f687a48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832efbb2785af43aa409b4a9f687a48c">&#9670;&nbsp;</a></span>push_playback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sound::sound_buffer::push_playback </td>
+          <td>(</td>
+          <td class="paramtype">playback_ptr&#160;</td>
+          <td class="paramname"><em>playback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет проигрываемую дорожку в конец списка </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playback</td><td>проигрываемая дорожка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Если playback не является зацикленым, то по окончанию звука от перейдет в состояние on_delete и удалится из проигрывателя </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/sound/<a class="el" href="sound__buffer_8h_source.html">sound_buffer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,71 @@
+\hypertarget{classinput_1_1input__manager}{}\doxysection{Класс input\+::input\+\_\+manager}
+\label{classinput_1_1input__manager}\index{input::input\_manager@{input::input\_manager}}
+
+
+Менеджер событий ввода Центральный класс, отвечающий за организацю передачи данных о событиях ввода исполняемому процессу. Полностью статический.  
+
+
+
+
+{\ttfamily \#include $<$input\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classinput_1_1input__manager_a4d3ecd90c99a1299e7c0fe50d9ab841b}{read\+\_\+input}} (\mbox{\hyperlink{structinput_1_1input__event}{input\+\_\+event}} $\ast$event)
+\begin{DoxyCompactList}\small\item\em Чтение следущего события клавиатуры \end{DoxyCompactList}\item 
+static glm\+::vec2 \mbox{\hyperlink{classinput_1_1input__manager_a0b8903e60b31042a2f604522ea544207}{get\+\_\+mouse\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает положение мыши (x;y) на экране в диапазоне \mbox{[}-\/1;1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Менеджер событий ввода Центральный класс, отвечающий за организацю передачи данных о событиях ввода исполняемому процессу. Полностью статический. 
+
+\begin{DoxyNote}{Заметки}
+Для функционирования класса проиницализируйте движок с помощью класса \mbox{\hyperlink{classcore_1_1engine}{core\+::engine}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+core\+::engine\+::window\+\_\+init(int width, int height, std\+::string title, bool gl\+\_\+debug) 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classinput_1_1input__manager_a0b8903e60b31042a2f604522ea544207}\label{classinput_1_1input__manager_a0b8903e60b31042a2f604522ea544207}} 
+\index{input::input\_manager@{input::input\_manager}!get\_mouse\_state@{get\_mouse\_state}}
+\index{get\_mouse\_state@{get\_mouse\_state}!input::input\_manager@{input::input\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_mouse\_state()}{get\_mouse\_state()}}
+{\footnotesize\ttfamily static glm\+::vec2 input\+::input\+\_\+manager\+::get\+\_\+mouse\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Возвращает положение мыши (x;y) на экране в диапазоне \mbox{[}-\/1;1\mbox{]}. 
+
+\begin{DoxyNote}{Заметки}
+Центр оси координат находится по центру экрана. Крайние точки по оси абсцисс и ординат находятся в диапазоне \mbox{[}-\/1;1\mbox{]} 
+\end{DoxyNote}
+\begin{DoxyReturn}{Возвращает}
+Положение мыши относительно окна 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classinput_1_1input__manager_a4d3ecd90c99a1299e7c0fe50d9ab841b}\label{classinput_1_1input__manager_a4d3ecd90c99a1299e7c0fe50d9ab841b}} 
+\index{input::input\_manager@{input::input\_manager}!read\_input@{read\_input}}
+\index{read\_input@{read\_input}!input::input\_manager@{input::input\_manager}}
+\doxysubsubsection{\texorpdfstring{read\_input()}{read\_input()}}
+{\footnotesize\ttfamily static bool input\+::input\+\_\+manager\+::read\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinput_1_1input__event}{input\+\_\+event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Чтение следущего события клавиатуры 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ out}}  & {\em event} & полученное событие \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ событие было записано в переменную event, в ином случае -\/ false 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/input/input\+\_\+manager.\+h\end{DoxyCompactItemize}

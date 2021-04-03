@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/sound/wav_sound.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bf8b89aaa3772fd188f30945fd9f6e01.html">sound</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">wav_sound.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>sound</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">enum struct</span> playback_state</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  on_play,   </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  on_pause,  </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  on_delete  </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsound_1_1wav__sound.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsound_1_1wav__sound.html">wav_sound</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html">   29</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structsound_1_1wav__sound_1_1playback.html">playback</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a3c9eeddf6bd6ff7f2b304aa9960afa96">   38</a></span>&#160;    <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a3c9eeddf6bd6ff7f2b304aa9960afa96">playback</a>(<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp; <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a877625b6bb1e828036b43d40cb8ea785">sound</a>, uint32_t pos = 0, <span class="keywordtype">bool</span> loop = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;             playback_state <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a7e1fb4da4dd1b77d6285003504796015">state</a> = playback_state ::on_play);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a1a44c41c9c2ad82ec0d07c9186684fa9">   45</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a1a44c41c9c2ad82ec0d07c9186684fa9">replay</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a877625b6bb1e828036b43d40cb8ea785">   46</a></span>&#160;    <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp; <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a877625b6bb1e828036b43d40cb8ea785">sound</a>;      </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a49d53862fe09babcbf20dc6830e30786">   47</a></span>&#160;    uint32_t <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a49d53862fe09babcbf20dc6830e30786">position</a>{0};  </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a7e1fb4da4dd1b77d6285003504796015">   48</a></span>&#160;    playback_state <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a7e1fb4da4dd1b77d6285003504796015">state</a>{playback_state ::on_play};  </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsound_1_1wav__sound_1_1playback.html#a1216b195f86ac199eb81e4141aeafcd3">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structsound_1_1wav__sound_1_1playback.html#a1216b195f86ac199eb81e4141aeafcd3">is_looped</a>{<span class="keyword">false</span>};  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classsound_1_1wav__sound.html#a5e3424ba23cfb74ddc22c03dc51c8c6f">   57</a></span>&#160;  <a class="code" href="classsound_1_1wav__sound.html#a5e3424ba23cfb74ddc22c03dc51c8c6f">wav_sound</a>(uint8_t* data, uint32_t duration);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classsound_1_1wav__sound.html#afd73aead17b93b89ed5cb078a9d53a0f">   66</a></span>&#160;  std::shared_ptr&lt;playback&gt; <a class="code" href="classsound_1_1wav__sound.html#afd73aead17b93b89ed5cb078a9d53a0f">play</a>(</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      uint32_t pos = 0, <span class="keywordtype">bool</span> loop = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      playback_state state = playback_state ::on_play);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classsound_1_1wav__sound.html#ad6c275dfa479ba6348c63773d18f2d7e">   74</a></span>&#160;  uint8_t* <a class="code" href="classsound_1_1wav__sound.html#ad6c275dfa479ba6348c63773d18f2d7e">get_data</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> data; }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classsound_1_1wav__sound.html#a153e51cbc084a9102c6fa08d58ce0c93">   80</a></span>&#160;  uint32_t <a class="code" href="classsound_1_1wav__sound.html#a153e51cbc084a9102c6fa08d58ce0c93">get_duration</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> duration; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  ~<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>(<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp;&amp;);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp; operator=(<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp;&amp;);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>(<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp; operator=(<a class="code" href="classsound_1_1wav__sound.html">wav_sound</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  uint8_t* data{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  uint32_t duration{0};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace sound</span></div>
+<div class="ttc" id="aclasssound_1_1wav__sound_html"><div class="ttname"><a href="classsound_1_1wav__sound.html">sound::wav_sound</a></div><div class="ttdoc">Звук из wav-формата Представляет собой класс, содержащий данные о звуке. Не отвечает за проигрывание ...</div><div class="ttdef"><b>Definition:</b> wav_sound.h:23</div></div>
+<div class="ttc" id="aclasssound_1_1wav__sound_html_a153e51cbc084a9102c6fa08d58ce0c93"><div class="ttname"><a href="classsound_1_1wav__sound.html#a153e51cbc084a9102c6fa08d58ce0c93">sound::wav_sound::get_duration</a></div><div class="ttdeci">uint32_t get_duration() const</div><div class="ttdoc">Возврат продолжительности звука</div><div class="ttdef"><b>Definition:</b> wav_sound.h:80</div></div>
+<div class="ttc" id="aclasssound_1_1wav__sound_html_a5e3424ba23cfb74ddc22c03dc51c8c6f"><div class="ttname"><a href="classsound_1_1wav__sound.html#a5e3424ba23cfb74ddc22c03dc51c8c6f">sound::wav_sound::wav_sound</a></div><div class="ttdeci">wav_sound(uint8_t *data, uint32_t duration)</div><div class="ttdoc">Создание звука</div></div>
+<div class="ttc" id="aclasssound_1_1wav__sound_html_ad6c275dfa479ba6348c63773d18f2d7e"><div class="ttname"><a href="classsound_1_1wav__sound.html#ad6c275dfa479ba6348c63773d18f2d7e">sound::wav_sound::get_data</a></div><div class="ttdeci">uint8_t * get_data() const</div><div class="ttdoc">Возврат указателя на бинарное представление звука</div><div class="ttdef"><b>Definition:</b> wav_sound.h:74</div></div>
+<div class="ttc" id="aclasssound_1_1wav__sound_html_afd73aead17b93b89ed5cb078a9d53a0f"><div class="ttname"><a href="classsound_1_1wav__sound.html#afd73aead17b93b89ed5cb078a9d53a0f">sound::wav_sound::play</a></div><div class="ttdeci">std::shared_ptr&lt; playback &gt; play(uint32_t pos=0, bool loop=false, playback_state state=playback_state ::on_play)</div><div class="ttdoc">Создание и запуск звуковой дорожки</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html">sound::wav_sound::playback</a></div><div class="ttdoc">Проигрыватель звука Структура, отвечающая за проигрывание wav_sound-звука.</div><div class="ttdef"><b>Definition:</b> wav_sound.h:30</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a1216b195f86ac199eb81e4141aeafcd3"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a1216b195f86ac199eb81e4141aeafcd3">sound::wav_sound::playback::is_looped</a></div><div class="ttdeci">bool is_looped</div><div class="ttdoc">состояние воспроизведения</div><div class="ttdef"><b>Definition:</b> wav_sound.h:49</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a1a44c41c9c2ad82ec0d07c9186684fa9"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a1a44c41c9c2ad82ec0d07c9186684fa9">sound::wav_sound::playback::replay</a></div><div class="ttdeci">void replay()</div><div class="ttdoc">Устанавлевает состояние дорожки в начало проигрыша и состояние воспроизведения</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a3c9eeddf6bd6ff7f2b304aa9960afa96"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a3c9eeddf6bd6ff7f2b304aa9960afa96">sound::wav_sound::playback::playback</a></div><div class="ttdeci">playback(wav_sound &amp;sound, uint32_t pos=0, bool loop=false, playback_state state=playback_state ::on_play)</div><div class="ttdoc">Создания звуковой дорожки</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a49d53862fe09babcbf20dc6830e30786"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a49d53862fe09babcbf20dc6830e30786">sound::wav_sound::playback::position</a></div><div class="ttdeci">uint32_t position</div><div class="ttdoc">позиция начала проигрывания</div><div class="ttdef"><b>Definition:</b> wav_sound.h:47</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a7e1fb4da4dd1b77d6285003504796015"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a7e1fb4da4dd1b77d6285003504796015">sound::wav_sound::playback::state</a></div><div class="ttdeci">playback_state state</div><div class="ttdoc">зациленность дорожки</div><div class="ttdef"><b>Definition:</b> wav_sound.h:48</div></div>
+<div class="ttc" id="astructsound_1_1wav__sound_1_1playback_html_a877625b6bb1e828036b43d40cb8ea785"><div class="ttname"><a href="structsound_1_1wav__sound_1_1playback.html#a877625b6bb1e828036b43d40cb8ea785">sound::wav_sound::playback::sound</a></div><div class="ttdeci">wav_sound &amp; sound</div><div class="ttdoc">звук для проигрывания</div><div class="ttdef"><b>Definition:</b> wav_sound.h:46</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

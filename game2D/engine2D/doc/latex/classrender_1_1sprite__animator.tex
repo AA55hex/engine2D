@@ -1,0 +1,168 @@
+\hypertarget{classrender_1_1sprite__animator}{}\doxysection{Класс render\+::sprite\+\_\+animator}
+\label{classrender_1_1sprite__animator}\index{render::sprite\_animator@{render::sprite\_animator}}
+
+
+Аниматор спрайта  
+
+
+
+
+{\ttfamily \#include $<$sprite\+\_\+animator.\+h$>$}
+
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrender_1_1sprite__animator_1_1frame}{frame}}
+\begin{DoxyCompactList}\small\item\em Фрейм анимации Воспомогательная структура, согласно которой отрисовывается спрайт \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrender_1_1sprite__animator_aca0901efdcc58d503327d72241fa1130}{sprite\+\_\+animator}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} $>$ sprite)
+\begin{DoxyCompactList}\small\item\em Инициализация аниматора \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1sprite__animator_a10cc22aa01c2cc1d4bd60130f858a853}{update}} (double duration)
+\begin{DoxyCompactList}\small\item\em Обновление состояния анимации \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1sprite__animator_acecf9b6fa6516b77dfbf4f2ea419fd66}{render}} (const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Отрисовка активного фрейма \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1sprite__animator_a7d2433371f30a47e0dbd32005260af5e}{add\+\_\+frame}} (const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&discriptor, double duration)
+\begin{DoxyCompactList}\small\item\em Добавление фрейма в конец списка кадров \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1sprite__animator_ae21d7ab0ff85492152a43ad653dbdf2a}\label{classrender_1_1sprite__animator_ae21d7ab0ff85492152a43ad653dbdf2a}} 
+void \mbox{\hyperlink{classrender_1_1sprite__animator_ae21d7ab0ff85492152a43ad653dbdf2a}{clear\+\_\+frames}} ()
+\begin{DoxyCompactList}\small\item\em Удаление списка кадров Очищает весь список кадров \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrender_1_1sprite__animator_1_1frame}{frame}} $\ast$ \mbox{\hyperlink{classrender_1_1sprite__animator_aadec3da2f542f8f5f6b9fff413512642}{current\+\_\+frame}} ()
+\begin{DoxyCompactList}\small\item\em Возврат активного кадра \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classrender_1_1sprite__animator_a24207d6bfd21efa16fe6d2fc8a19b0ae}{get\+\_\+frames\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Возарвт количества кадров в аниматоре \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classrender_1_1sprite__animator_aa1a459f6c170ec38b91d82303baa5e9b}{get\+\_\+duration}} ()
+\begin{DoxyCompactList}\small\item\em Возврат общей продолжительности анимации \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Аниматор спрайта 
+
+\begin{DoxyNote}{Заметки}
+Аниматор спрайта работает только с текстурными атласами, но не с массивами текстур 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_aca0901efdcc58d503327d72241fa1130}\label{classrender_1_1sprite__animator_aca0901efdcc58d503327d72241fa1130}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!sprite\_animator@{sprite\_animator}}
+\index{sprite\_animator@{sprite\_animator}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{sprite\_animator()}{sprite\_animator()}}
+{\footnotesize\ttfamily render\+::sprite\+\_\+animator\+::sprite\+\_\+animator (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} $>$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Инициализация аниматора 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sprite} & спрайт, используемый для анимации \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_a7d2433371f30a47e0dbd32005260af5e}\label{classrender_1_1sprite__animator_a7d2433371f30a47e0dbd32005260af5e}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!add\_frame@{add\_frame}}
+\index{add\_frame@{add\_frame}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{add\_frame()}{add\_frame()}}
+{\footnotesize\ttfamily void render\+::sprite\+\_\+animator\+::add\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&}]{discriptor,  }\item[{double}]{duration }\end{DoxyParamCaption})}
+
+
+
+Добавление фрейма в конец списка кадров 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em discriptor} & описатель области фрейма \\
+\hline
+{\em duration} & продолжительность кадра, мс \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Допустимо 0 значение duration. Отрицательное значение вызовет зацикливание на кадре. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_aadec3da2f542f8f5f6b9fff413512642}\label{classrender_1_1sprite__animator_aadec3da2f542f8f5f6b9fff413512642}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!current\_frame@{current\_frame}}
+\index{current\_frame@{current\_frame}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{current\_frame()}{current\_frame()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrender_1_1sprite__animator_1_1frame}{frame}}$\ast$ render\+::sprite\+\_\+animator\+::current\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возврат активного кадра 
+
+\begin{DoxyReturn}{Возвращает}
+Активный кадр анимации 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_aa1a459f6c170ec38b91d82303baa5e9b}\label{classrender_1_1sprite__animator_aa1a459f6c170ec38b91d82303baa5e9b}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!get\_duration@{get\_duration}}
+\index{get\_duration@{get\_duration}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{get\_duration()}{get\_duration()}}
+{\footnotesize\ttfamily double render\+::sprite\+\_\+animator\+::get\+\_\+duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возврат общей продолжительности анимации 
+
+\begin{DoxyReturn}{Возвращает}
+Сумма продолжительностей всех кадров 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_a24207d6bfd21efa16fe6d2fc8a19b0ae}\label{classrender_1_1sprite__animator_a24207d6bfd21efa16fe6d2fc8a19b0ae}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!get\_frames\_count@{get\_frames\_count}}
+\index{get\_frames\_count@{get\_frames\_count}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{get\_frames\_count()}{get\_frames\_count()}}
+{\footnotesize\ttfamily size\+\_\+t render\+::sprite\+\_\+animator\+::get\+\_\+frames\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возарвт количества кадров в аниматоре 
+
+\begin{DoxyReturn}{Возвращает}
+Количество кадров в аниматоре 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_acecf9b6fa6516b77dfbf4f2ea419fd66}\label{classrender_1_1sprite__animator_acecf9b6fa6516b77dfbf4f2ea419fd66}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!render@{render}}
+\index{render@{render}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void render\+::sprite\+\_\+animator\+::render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&}]{settings }\end{DoxyParamCaption})}
+
+
+
+Отрисовка активного фрейма 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em settings} & параметры отрисовки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Если аниматор не содержит кадров, функция обратится к функции \mbox{\hyperlink{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}{sprite2\+D\+::render(const render\+\_\+settings\& settings)}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}{render\+::sprite2\+D\+::render(const render\+\_\+settings\& settings)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classrender_1_1sprite__animator_a10cc22aa01c2cc1d4bd60130f858a853}\label{classrender_1_1sprite__animator_a10cc22aa01c2cc1d4bd60130f858a853}} 
+\index{render::sprite\_animator@{render::sprite\_animator}!update@{update}}
+\index{update@{update}!render::sprite\_animator@{render::sprite\_animator}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void render\+::sprite\+\_\+animator\+::update (\begin{DoxyParamCaption}\item[{double}]{duration }\end{DoxyParamCaption})}
+
+
+
+Обновление состояния анимации 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em duration} & прошедшее время в миллисекундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+За один вызов функция может перейти только на 1 кадр, не смотря на значение duration. 
+\end{DoxyNote}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/sprite\+\_\+animator.\+h\end{DoxyCompactItemize}

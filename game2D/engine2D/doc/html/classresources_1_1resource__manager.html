@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Класс resources::resource_manager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>resources</b></li><li class="navelem"><a class="el" href="classresources_1_1resource__manager.html">resource_manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classresources_1_1resource__manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс resources::resource_manager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Менеджер ресурсов Представляет собой абстракцию менеджера по загрузке и хранению подгружаемых ресурсов, таких, как текстуры, спрайты, звуки и т.д. Изначально содержит интерфейс по загрузке и хранению всех примитивов библиотеки. При необходимости, можно создать дочерний класс и дополнить его интерфейсом хранения и загрузки игровых объектов.  
+ <a href="classresources_1_1resource__manager.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="resource__manager_8h_source.html">resource_manager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0ef32a66d836b4e2011dd5bd8c405368"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a0ef32a66d836b4e2011dd5bd8c405368">resource_manager</a> (const std::string &amp;dir_path)</td></tr>
+<tr class="memdesc:a0ef32a66d836b4e2011dd5bd8c405368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация менеджера ресурсов  <a href="classresources_1_1resource__manager.html#a0ef32a66d836b4e2011dd5bd8c405368">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0ef32a66d836b4e2011dd5bd8c405368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267d0680565c926c8f53f3fb840d7837"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a267d0680565c926c8f53f3fb840d7837">reset_path</a> (const std::string &amp;dir_path)</td></tr>
+<tr class="memdesc:a267d0680565c926c8f53f3fb840d7837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изменение директории ресурсов  <a href="classresources_1_1resource__manager.html#a267d0680565c926c8f53f3fb840d7837">Подробнее...</a><br /></td></tr>
+<tr class="separator:a267d0680565c926c8f53f3fb840d7837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafcf7ab26fc795a14045e9cec60718f"><td class="memItemLeft" align="right" valign="top"><a id="aeafcf7ab26fc795a14045e9cec60718f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>resource_manager</b> (<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;&amp;)</td></tr>
+<tr class="separator:aeafcf7ab26fc795a14045e9cec60718f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86852ec2b04712e5393450b8b68d021e"><td class="memItemLeft" align="right" valign="top"><a id="a86852ec2b04712e5393450b8b68d021e"></a>
+<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;&amp;)</td></tr>
+<tr class="separator:a86852ec2b04712e5393450b8b68d021e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ac70e2a24ca06fa2e59223ae4d5e4a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1shader__program.html">render::shader_program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a47ac70e2a24ca06fa2e59223ae4d5e4a">load_shader_program</a> (const std::string &amp;prg_name, const std::string &amp;vert_path, const std::string &amp;frag_path)</td></tr>
+<tr class="memdesc:a47ac70e2a24ca06fa2e59223ae4d5e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка шейдерной программы, используя GLSL-шейдеры вершинного и фрагментного типа из файла.  <a href="classresources_1_1resource__manager.html#a47ac70e2a24ca06fa2e59223ae4d5e4a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a47ac70e2a24ca06fa2e59223ae4d5e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac139c6bc28641dde6493abe80454d6f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1shader__program.html">render::shader_program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#aac139c6bc28641dde6493abe80454d6f">get_shader_program</a> (const std::string &amp;prg_name)</td></tr>
+<tr class="memdesc:aac139c6bc28641dde6493abe80454d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат шейдерной программы по имени Возвращает шейдерную программу из списка загруженных программ  <a href="classresources_1_1resource__manager.html#aac139c6bc28641dde6493abe80454d6f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac139c6bc28641dde6493abe80454d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e44506a2e3a9d238bee71acda5162f4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1texture2D.html">render::texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a0e44506a2e3a9d238bee71acda5162f4">load_texture2D</a> (const std::string &amp;texture_name, const std::string &amp;filepath)</td></tr>
+<tr class="memdesc:a0e44506a2e3a9d238bee71acda5162f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка 2D-текстуры из файла  <a href="classresources_1_1resource__manager.html#a0e44506a2e3a9d238bee71acda5162f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e44506a2e3a9d238bee71acda5162f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0beb7c9c85474afe309e12fe360a00"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1texture2D.html">render::texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a5d0beb7c9c85474afe309e12fe360a00">get_texture2D</a> (const std::string &amp;texture_name)</td></tr>
+<tr class="memdesc:a5d0beb7c9c85474afe309e12fe360a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат загруженной текстуры по имени  <a href="classresources_1_1resource__manager.html#a5d0beb7c9c85474afe309e12fe360a00">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5d0beb7c9c85474afe309e12fe360a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077a62430687d7632dcacbcb9b2d4a64"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1texture2D.html">render::texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a077a62430687d7632dcacbcb9b2d4a64">load_texture_atlas2D</a> (const std::string &amp;texture_name, const std::string &amp;filepath, std::vector&lt; std::string &gt; subtexture_names, unsigned int frame_width, unsigned int frame_height)</td></tr>
+<tr class="memdesc:a077a62430687d7632dcacbcb9b2d4a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка текстурного атласа из файла Загружает текстуру, представляющую собой текстурный атлас, создавая подтекстуры равного размера с указанными именами  <a href="classresources_1_1resource__manager.html#a077a62430687d7632dcacbcb9b2d4a64">Подробнее...</a><br /></td></tr>
+<tr class="separator:a077a62430687d7632dcacbcb9b2d4a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9877e5d469e2b591b9fb4a6c9d4dfb5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1sprite2D.html">render::sprite2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#af9877e5d469e2b591b9fb4a6c9d4dfb5">load_sprite</a> (const std::string &amp;sprite_name, const std::string &amp;texture, const std::string &amp;program, const std::string &amp;subtexture=&quot;&quot;)</td></tr>
+<tr class="memdesc:af9877e5d469e2b591b9fb4a6c9d4dfb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка спрайта из загруженных ресурсов Создает спрайт на основе уже загруженной текстуры и программы  <a href="classresources_1_1resource__manager.html#af9877e5d469e2b591b9fb4a6c9d4dfb5">Подробнее...</a><br /></td></tr>
+<tr class="separator:af9877e5d469e2b591b9fb4a6c9d4dfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3041c905c5d4032e5e2ceaca8221d37"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classrender_1_1sprite2D.html">render::sprite2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#af3041c905c5d4032e5e2ceaca8221d37">get_sprite</a> (const std::string &amp;sprite_name)</td></tr>
+<tr class="memdesc:af3041c905c5d4032e5e2ceaca8221d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат загруденного спрайта по имени  <a href="classresources_1_1resource__manager.html#af3041c905c5d4032e5e2ceaca8221d37">Подробнее...</a><br /></td></tr>
+<tr class="separator:af3041c905c5d4032e5e2ceaca8221d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c634d778a2066a108aa8498bb045500"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classsound_1_1wav__sound.html">sound::wav_sound</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a3c634d778a2066a108aa8498bb045500">load_wav</a> (const std::string &amp;wav_name, const std::string &amp;filepath)</td></tr>
+<tr class="memdesc:a3c634d778a2066a108aa8498bb045500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка wav-звука из файла  <a href="classresources_1_1resource__manager.html#a3c634d778a2066a108aa8498bb045500">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3c634d778a2066a108aa8498bb045500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca07285237e8d5c8050a7269dc2435f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classsound_1_1wav__sound.html">sound::wav_sound</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classresources_1_1resource__manager.html#a3ca07285237e8d5c8050a7269dc2435f">get_wav</a> (const std::string &amp;wav_name)</td></tr>
+<tr class="memdesc:a3ca07285237e8d5c8050a7269dc2435f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат загруженного звука  <a href="classresources_1_1resource__manager.html#a3ca07285237e8d5c8050a7269dc2435f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ca07285237e8d5c8050a7269dc2435f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f30a38b87e94f05cd89096721d40896"><td class="memItemLeft" align="right" valign="top"><a id="a0f30a38b87e94f05cd89096721d40896"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>resource_manager</b> (<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;)=delete</td></tr>
+<tr class="separator:a0f30a38b87e94f05cd89096721d40896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1ebf9ad5fd2ebbbab3af58a11bd391"><td class="memItemLeft" align="right" valign="top"><a id="a4c1ebf9ad5fd2ebbbab3af58a11bd391"></a>
+<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classresources_1_1resource__manager.html">resource_manager</a> &amp;)=delete</td></tr>
+<tr class="separator:a4c1ebf9ad5fd2ebbbab3af58a11bd391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Менеджер ресурсов Представляет собой абстракцию менеджера по загрузке и хранению подгружаемых ресурсов, таких, как текстуры, спрайты, звуки и т.д. Изначально содержит интерфейс по загрузке и хранению всех примитивов библиотеки. При необходимости, можно создать дочерний класс и дополнить его интерфейсом хранения и загрузки игровых объектов. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Выводит логи в процессе создания/загрузки/возврата ресурса. </dd>
+<dd>
+Каождый объект имеет свой список ресурсов </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0ef32a66d836b4e2011dd5bd8c405368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef32a66d836b4e2011dd5bd8c405368">&#9670;&nbsp;</a></span>resource_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">resources::resource_manager::resource_manager </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dir_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация менеджера ресурсов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir_path</td><td>путь к директории ресурсов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aac139c6bc28641dde6493abe80454d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac139c6bc28641dde6493abe80454d6f">&#9670;&nbsp;</a></span>get_shader_program()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1shader__program.html">render::shader_program</a>&gt; resources::resource_manager::get_shader_program </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prg_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат шейдерной программы по имени Возвращает шейдерную программу из списка загруженных программ </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">имя,идентифицирующее</td><td>объект </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Искомый объект, nullptr - объект не найден </dd></dl>
+
+</div>
+</div>
+<a id="af3041c905c5d4032e5e2ceaca8221d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3041c905c5d4032e5e2ceaca8221d37">&#9670;&nbsp;</a></span>get_sprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1sprite2D.html">render::sprite2D</a>&gt; resources::resource_manager::get_sprite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sprite_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат загруденного спрайта по имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite_name</td><td>имя, идентифицирующее объект </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Искомый объект, nullptr - объект не найден </dd></dl>
+
+</div>
+</div>
+<a id="a5d0beb7c9c85474afe309e12fe360a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0beb7c9c85474afe309e12fe360a00">&#9670;&nbsp;</a></span>get_texture2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1texture2D.html">render::texture2D</a>&gt; resources::resource_manager::get_texture2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат загруженной текстуры по имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture_name</td><td>имя, идентифицирующее объект </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Искомый объект, nullptr - объект не найден </dd></dl>
+
+</div>
+</div>
+<a id="a3ca07285237e8d5c8050a7269dc2435f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca07285237e8d5c8050a7269dc2435f">&#9670;&nbsp;</a></span>get_wav()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classsound_1_1wav__sound.html">sound::wav_sound</a>&gt; resources::resource_manager::get_wav </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>wav_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат загруженного звука </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wav_name</td><td>имя, идентифицирующее объект </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Искомый объект, nullptr - объект не найден </dd></dl>
+
+</div>
+</div>
+<a id="a47ac70e2a24ca06fa2e59223ae4d5e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ac70e2a24ca06fa2e59223ae4d5e4a">&#9670;&nbsp;</a></span>load_shader_program()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1shader__program.html">render::shader_program</a>&gt; resources::resource_manager::load_shader_program </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prg_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vert_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>frag_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка шейдерной программы, используя GLSL-шейдеры вершинного и фрагментного типа из файла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prg_name</td><td>имя, идентифицирующее объект </td></tr>
+    <tr><td class="paramname">vert_path</td><td>относительный путь к вершинному шейдеру </td></tr>
+    <tr><td class="paramname">frag_path</td><td>относительный путь к фрагментному шейдеру </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Загруженная шейдерная программа </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Программа создается даже в случае неудачной компиляции </dd></dl>
+
+</div>
+</div>
+<a id="af9877e5d469e2b591b9fb4a6c9d4dfb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9877e5d469e2b591b9fb4a6c9d4dfb5">&#9670;&nbsp;</a></span>load_sprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1sprite2D.html">render::sprite2D</a>&gt; resources::resource_manager::load_sprite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sprite_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>subtexture</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка спрайта из загруженных ресурсов Создает спрайт на основе уже загруженной текстуры и программы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite_name</td><td>имя, идентифицирующее объект </td></tr>
+    <tr><td class="paramname">texture</td><td>имя загруденной текстуры </td></tr>
+    <tr><td class="paramname">program</td><td>имя загруженной шейдерной программы </td></tr>
+    <tr><td class="paramname">subtexture</td><td>имя подтекстуры для инициализации спрайта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Созданный спрайт, nullptr - объект не загружен </dd></dl>
+
+</div>
+</div>
+<a id="a0e44506a2e3a9d238bee71acda5162f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e44506a2e3a9d238bee71acda5162f4">&#9670;&nbsp;</a></span>load_texture2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1texture2D.html">render::texture2D</a>&gt; resources::resource_manager::load_texture2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка 2D-текстуры из файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture_name</td><td>мя, идентифицирующее объект </td></tr>
+    <tr><td class="paramname">filepath</td><td>относительный путь к текстуре </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Загруженная тексткура, nullptr - объект не загружен </dd></dl>
+
+</div>
+</div>
+<a id="a077a62430687d7632dcacbcb9b2d4a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a077a62430687d7632dcacbcb9b2d4a64">&#9670;&nbsp;</a></span>load_texture_atlas2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classrender_1_1texture2D.html">render::texture2D</a>&gt; resources::resource_manager::load_texture_atlas2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>subtexture_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>frame_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>frame_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка текстурного атласа из файла Загружает текстуру, представляющую собой текстурный атлас, создавая подтекстуры равного размера с указанными именами </p>
+<dl class="section note"><dt>Заметки</dt><dd>Текстуры и текстурные атласы хранятся совместно </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture_name</td><td>имя, идентифицирующее объект </td></tr>
+    <tr><td class="paramname">filepath</td><td>пкть к текстуре </td></tr>
+    <tr><td class="paramname">subtexture_names</td><td>Имена для ижентификации подтекстур </td></tr>
+    <tr><td class="paramname">frame_width</td><td>Ширина подтекстуры </td></tr>
+    <tr><td class="paramname">frame_height</td><td>Высота подтекстуры </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Загруденный текстурный атлас, nullptr - объект не загружен </dd></dl>
+
+</div>
+</div>
+<a id="a3c634d778a2066a108aa8498bb045500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c634d778a2066a108aa8498bb045500">&#9670;&nbsp;</a></span>load_wav()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classsound_1_1wav__sound.html">sound::wav_sound</a>&gt; resources::resource_manager::load_wav </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>wav_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка wav-звука из файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wav_name</td><td>имя, идентифицирующее объект </td></tr>
+    <tr><td class="paramname">filepath</td><td>относительный путь к wav-файлу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Загруденный звук, nullptr - объект не загружен </dd></dl>
+
+</div>
+</div>
+<a id="a267d0680565c926c8f53f3fb840d7837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267d0680565c926c8f53f3fb840d7837">&#9670;&nbsp;</a></span>reset_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resources::resource_manager::reset_path </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dir_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Изменение директории ресурсов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir_path</td><td>путь к директории ресурсов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/resources/<a class="el" href="resource__manager_8h_source.html">resource_manager.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

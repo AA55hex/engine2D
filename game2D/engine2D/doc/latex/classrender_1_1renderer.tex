@@ -1,0 +1,105 @@
+\hypertarget{classrender_1_1renderer}{}\doxysection{Класс render\+::renderer}
+\label{classrender_1_1renderer}\index{render::renderer@{render::renderer}}
+
+
+Рендер-\/менеджер Статический класс, предоставляющий интерфейс рендера изображения  
+
+
+
+
+{\ttfamily \#include $<$renderer.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrender_1_1renderer_a1053d9d3251cf47c566d9f65a1834509}{draw}} (const \mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&vao, const \mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&vebo, const \mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&program, GLenum mode=GL\+\_\+\+TRIANGLES)
+\begin{DoxyCompactList}\small\item\em Отрисовка в back-\/буфер \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classrender_1_1renderer_aaa13c485d05491335f33b5a644bfe5a9}{set\+\_\+viewport}} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Задать диапазон для отрисовки Задает диапазон, в границах которого будет расчитываться отрисовка Границы отрисовки указываются не нормализованными значениями. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classrender_1_1renderer_ae25ab04c60fe91d9180219ccc813db64}{clear\+\_\+color}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Установить цвет очистки экрана Устанавливает, каким цветом будет заполняться буфер экрана при вызове \mbox{\hyperlink{classrender_1_1renderer_af721dea6369e567f5ef3f735b0e55686}{renderer\+::clear()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1renderer_af721dea6369e567f5ef3f735b0e55686}\label{classrender_1_1renderer_af721dea6369e567f5ef3f735b0e55686}} 
+static void \mbox{\hyperlink{classrender_1_1renderer_af721dea6369e567f5ef3f735b0e55686}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Очистка back-\/буфера Очищает буфер, который будет заполняться, цветом, указанным в \mbox{\hyperlink{classrender_1_1renderer_ae25ab04c60fe91d9180219ccc813db64}{renderer\+::clear\+\_\+color(float r, float g, float b, float a)}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Рендер-\/менеджер Статический класс, предоставляющий интерфейс рендера изображения 
+
+\begin{DoxyNote}{Заметки}
+Перед использование необходима инициализация ресурсов в классе \mbox{\hyperlink{classcore_1_1engine}{core\+::engine}} 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1renderer_ae25ab04c60fe91d9180219ccc813db64}\label{classrender_1_1renderer_ae25ab04c60fe91d9180219ccc813db64}} 
+\index{render::renderer@{render::renderer}!clear\_color@{clear\_color}}
+\index{clear\_color@{clear\_color}!render::renderer@{render::renderer}}
+\doxysubsubsection{\texorpdfstring{clear\_color()}{clear\_color()}}
+{\footnotesize\ttfamily static void render\+::renderer\+::clear\+\_\+color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Установить цвет очистки экрана Устанавливает, каким цветом будет заполняться буфер экрана при вызове \mbox{\hyperlink{classrender_1_1renderer_af721dea6369e567f5ef3f735b0e55686}{renderer\+::clear()}} 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em r} & red-\/канал \\
+\hline
+{\em g} & green-\/канал \\
+\hline
+{\em b} & blue-\/канал \\
+\hline
+{\em a} & alpha-\/канал \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrender_1_1renderer_a1053d9d3251cf47c566d9f65a1834509}\label{classrender_1_1renderer_a1053d9d3251cf47c566d9f65a1834509}} 
+\index{render::renderer@{render::renderer}!draw@{draw}}
+\index{draw@{draw}!render::renderer@{render::renderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily static void render\+::renderer\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&}]{vao,  }\item[{const \mbox{\hyperlink{classrender_1_1index__buffer}{index\+\_\+buffer}} \&}]{vebo,  }\item[{const \mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&}]{program,  }\item[{GLenum}]{mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отрисовка в back-\/буфер 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em vao} & используемый массив атрибутов \\
+\hline
+{\em vebo} & используемый массив индексов \\
+\hline
+{\em program} & используемая шейдерная программа \\
+\hline
+{\em mode} & режим отрисовки \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrender_1_1renderer_aaa13c485d05491335f33b5a644bfe5a9}\label{classrender_1_1renderer_aaa13c485d05491335f33b5a644bfe5a9}} 
+\index{render::renderer@{render::renderer}!set\_viewport@{set\_viewport}}
+\index{set\_viewport@{set\_viewport}!render::renderer@{render::renderer}}
+\doxysubsubsection{\texorpdfstring{set\_viewport()}{set\_viewport()}}
+{\footnotesize\ttfamily static void render\+::renderer\+::set\+\_\+viewport (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Задать диапазон для отрисовки Задает диапазон, в границах которого будет расчитываться отрисовка Границы отрисовки указываются не нормализованными значениями. 
+
+\begin{DoxyNote}{Заметки}
+Начало оси координат находится в левом верхнем углу. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & положение точки по оси абсцисс \\
+\hline
+{\em y} & положение точки по оси ординат \\
+\hline
+{\em width} & ширина области \\
+\hline
+{\em height} & высота области \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/renderer.\+h\end{DoxyCompactItemize}

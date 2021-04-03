@@ -1,0 +1,127 @@
+\hypertarget{classcore_1_1igame}{}\doxysection{Класс core\+::igame}
+\label{classcore_1_1igame}\index{core::igame@{core::igame}}
+
+
+igame -\/ интерфейс взаимодействия с классом engine.  
+
+
+
+
+{\ttfamily \#include $<$igame.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classcore_1_1igame_aa15c14f7cc8675ae73a702745600e504}{inicialize}} ()=0
+\begin{DoxyCompactList}\small\item\em Инициализация необходимых ресурсов \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcore_1_1igame_a616c04663f77440da338b3cf11d8287e}{read\+\_\+input}} (double duration)=0
+\begin{DoxyCompactList}\small\item\em Действия по обработке ванных ввода с клавиатуры и мыши \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcore_1_1igame_aaafc7f1a770e9f841bc2b41bf59baaa5}{update\+\_\+data}} (double duration)=0
+\begin{DoxyCompactList}\small\item\em Действия по обновлению данных игровых объектов \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcore_1_1igame_a9f0cd3544baa3eade984243b3f4645db}{render\+\_\+output}} ()=0
+\begin{DoxyCompactList}\small\item\em Действия по обработке изображения и звука. Перед вызовом данной функции из класса engine, происходит подготовка следущего игрового кадра. После вызова данной функции из класса engine, происходит обновление кадра. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcore_1_1igame_a2a94fc10f0604fd971fe35511c4177eb}{is\+\_\+playing}} ()=0
+\begin{DoxyCompactList}\small\item\em Указывает на состояние игры \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcore_1_1igame_acd96960c26afd6f08319621f9e3b8ac7}{is\+\_\+inicialized}} ()=0
+\begin{DoxyCompactList}\small\item\em Указывает на состояние инициализации ресурсов игры \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+igame -\/ интерфейс взаимодействия с классом engine. 
+
+Данный интерфейс содержит весь необходимый функционал для взаимодействия с классом engine. \begin{DoxyNote}{Заметки}
+Используйте реализацию данного класса в качестве класса-\/игры. 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classcore_1_1igame_aa15c14f7cc8675ae73a702745600e504}\label{classcore_1_1igame_aa15c14f7cc8675ae73a702745600e504}} 
+\index{core::igame@{core::igame}!inicialize@{inicialize}}
+\index{inicialize@{inicialize}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{inicialize()}{inicialize()}}
+{\footnotesize\ttfamily virtual bool core\+::igame\+::inicialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Инициализация необходимых ресурсов 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ успешнаяя инициализация, false -\/ инициализация прервана 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1igame_acd96960c26afd6f08319621f9e3b8ac7}\label{classcore_1_1igame_acd96960c26afd6f08319621f9e3b8ac7}} 
+\index{core::igame@{core::igame}!is\_inicialized@{is\_inicialized}}
+\index{is\_inicialized@{is\_inicialized}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{is\_inicialized()}{is\_inicialized()}}
+{\footnotesize\ttfamily virtual bool core\+::igame\+::is\+\_\+inicialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Указывает на состояние инициализации ресурсов игры 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ ресурсы загружены, false -\/ ресурсы не загружены 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Возврат false так же может говорить о не успешной инициализации игры 
+\end{DoxyNote}
+\mbox{\Hypertarget{classcore_1_1igame_a2a94fc10f0604fd971fe35511c4177eb}\label{classcore_1_1igame_a2a94fc10f0604fd971fe35511c4177eb}} 
+\index{core::igame@{core::igame}!is\_playing@{is\_playing}}
+\index{is\_playing@{is\_playing}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{is\_playing()}{is\_playing()}}
+{\footnotesize\ttfamily virtual bool core\+::igame\+::is\+\_\+playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Указывает на состояние игры 
+
+\begin{DoxyReturn}{Возвращает}
+состояние игры. true -\/ игровой процесс продолжается, false -\/ окончен 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1igame_a616c04663f77440da338b3cf11d8287e}\label{classcore_1_1igame_a616c04663f77440da338b3cf11d8287e}} 
+\index{core::igame@{core::igame}!read\_input@{read\_input}}
+\index{read\_input@{read\_input}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{read\_input()}{read\_input()}}
+{\footnotesize\ttfamily virtual void core\+::igame\+::read\+\_\+input (\begin{DoxyParamCaption}\item[{double}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Действия по обработке ванных ввода с клавиатуры и мыши 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em duration} & время, прошедшее с последнего вызова \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcore_1_1igame_a9f0cd3544baa3eade984243b3f4645db}\label{classcore_1_1igame_a9f0cd3544baa3eade984243b3f4645db}} 
+\index{core::igame@{core::igame}!render\_output@{render\_output}}
+\index{render\_output@{render\_output}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{render\_output()}{render\_output()}}
+{\footnotesize\ttfamily virtual void core\+::igame\+::render\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Действия по обработке изображения и звука. Перед вызовом данной функции из класса engine, происходит подготовка следущего игрового кадра. После вызова данной функции из класса engine, происходит обновление кадра. 
+
+\begin{DoxyNote}{Заметки}
+Не производите запросы по обработке изображения вне диапазона данной функции. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classcore_1_1igame_aaafc7f1a770e9f841bc2b41bf59baaa5}\label{classcore_1_1igame_aaafc7f1a770e9f841bc2b41bf59baaa5}} 
+\index{core::igame@{core::igame}!update\_data@{update\_data}}
+\index{update\_data@{update\_data}!core::igame@{core::igame}}
+\doxysubsubsection{\texorpdfstring{update\_data()}{update\_data()}}
+{\footnotesize\ttfamily virtual void core\+::igame\+::update\+\_\+data (\begin{DoxyParamCaption}\item[{double}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Действия по обновлению данных игровых объектов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em duration} & время, прошедшее с последнего вызова \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/core/igame.\+h\end{DoxyCompactItemize}

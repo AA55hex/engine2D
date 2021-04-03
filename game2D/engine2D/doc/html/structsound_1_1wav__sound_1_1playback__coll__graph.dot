@@ -1,0 +1,9 @@
+digraph "sound::wav_sound::playback"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="sound::wav_sound::playback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Проигрыватель звука Структура, отвечающая за проигрывание wav_sound-звука."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sound" ,fontname="Helvetica"];
+  Node2 [label="sound::wav_sound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsound_1_1wav__sound.html",tooltip="Звук из wav-формата Представляет собой класс, содержащий данные о звуке. Не отвечает за проигрывание ..."];
+}

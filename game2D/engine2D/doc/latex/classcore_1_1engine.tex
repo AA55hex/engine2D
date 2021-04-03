@@ -1,0 +1,138 @@
+\hypertarget{classcore_1_1engine}{}\doxysection{Класс core\+::engine}
+\label{classcore_1_1engine}\index{core::engine@{core::engine}}
+
+
+Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame. На данный момент является полностью статическим и поддерживает одновременную работу только с одним объектом игры.  
+
+
+
+
+{\ttfamily \#include $<$engine.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classcore_1_1engine_a32578b3553feddfd8821718fc2ab2b8d}{inicialize}} (int width, int height, std\+::string title, bool gl\+\_\+debug=false)
+\begin{DoxyCompactList}\small\item\em Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов. При отсутствии инициализации большая часть структур библиотеки будует возвращать исключание. При работе возвращает log-\/и событий. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcore_1_1engine_a35b4362ceb99637f7e9ff52ae146e8d5}{dispose}} ()
+\begin{DoxyCompactList}\small\item\em Освобождение ресурсов движка \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classcore_1_1engine_afb0b02329b3319972a33882a63f4f96e}{is\+\_\+inicialized}} ()
+\begin{DoxyCompactList}\small\item\em Состояние инициализации движка \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcore_1_1engine_ad728463058698a2019e62680b022efdb}{play}} (\mbox{\hyperlink{classcore_1_1igame}{igame}} \&game)
+\begin{DoxyCompactList}\small\item\em Запуск цикла игры Сначала происходит разовая поптыка инициализации игры, если она не была произведена. Цикл состоит из следующих этапов этапов\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1engine_a4aa1002806b2fb0f76703aa3de293b8a}\label{classcore_1_1engine_a4aa1002806b2fb0f76703aa3de293b8a}} 
+class {\bfseries sound\+::sound\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{classcore_1_1engine_af04de74791b0f840481b65078e328271}\label{classcore_1_1engine_af04de74791b0f840481b65078e328271}} 
+class {\bfseries input\+::input\+\_\+manager}
+\item 
+\mbox{\Hypertarget{classcore_1_1engine_ae4f2d3b10b944e87f576556dcebe98ba}\label{classcore_1_1engine_ae4f2d3b10b944e87f576556dcebe98ba}} 
+void {\bfseries sound\+::audio\+\_\+callback} (void $\ast$, Uint8 $\ast$stream, int len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame. На данный момент является полностью статическим и поддерживает одновременную работу только с одним объектом игры. 
+
+\begin{DoxyNote}{Заметки}
+Перед обращением к каким-\/либо структурам библиотеки, загрузите все ресурсы с помощью данного класса. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classcore_1_1engine_a32578b3553feddfd8821718fc2ab2b8d}{engine\+::inicialize}}(int width, int height, std\+::string title, bool gl\+\_\+debug = false) 
+
+\mbox{\hyperlink{classcore_1_1igame}{igame}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classcore_1_1engine_a35b4362ceb99637f7e9ff52ae146e8d5}\label{classcore_1_1engine_a35b4362ceb99637f7e9ff52ae146e8d5}} 
+\index{core::engine@{core::engine}!dispose@{dispose}}
+\index{dispose@{dispose}!core::engine@{core::engine}}
+\doxysubsubsection{\texorpdfstring{dispose()}{dispose()}}
+{\footnotesize\ttfamily static void core\+::engine\+::dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Освобождение ресурсов движка 
+
+\begin{DoxyNote}{Заметки}
+Если не была проведена инициализация, в log-\/и выведется соответствующее сообщение 
+\end{DoxyNote}
+\mbox{\Hypertarget{classcore_1_1engine_a32578b3553feddfd8821718fc2ab2b8d}\label{classcore_1_1engine_a32578b3553feddfd8821718fc2ab2b8d}} 
+\index{core::engine@{core::engine}!inicialize@{inicialize}}
+\index{inicialize@{inicialize}!core::engine@{core::engine}}
+\doxysubsubsection{\texorpdfstring{inicialize()}{inicialize()}}
+{\footnotesize\ttfamily static bool core\+::engine\+::inicialize (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{std\+::string}]{title,  }\item[{bool}]{gl\+\_\+debug = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Инициализация ресурсов игрового движка Инициализация необходима для работы всех остальных классов. При отсутствии инициализации большая часть структур библиотеки будует возвращать исключание. При работе возвращает log-\/и событий. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em width} & ширина окна \\
+\hline
+{\em height} & высота окна \\
+\hline
+{\em title} & заголовок окна \\
+\hline
+{\em gl\+\_\+debug} & true -\/ использовать debug-\/контекст окна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ успешная инициализация, false -\/ инициализация прервана 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+При неудачной инициализации обратите внимание на полученные log-\/и 
+\end{DoxyNote}
+\mbox{\Hypertarget{classcore_1_1engine_afb0b02329b3319972a33882a63f4f96e}\label{classcore_1_1engine_afb0b02329b3319972a33882a63f4f96e}} 
+\index{core::engine@{core::engine}!is\_inicialized@{is\_inicialized}}
+\index{is\_inicialized@{is\_inicialized}!core::engine@{core::engine}}
+\doxysubsubsection{\texorpdfstring{is\_inicialized()}{is\_inicialized()}}
+{\footnotesize\ttfamily static bool core\+::engine\+::is\+\_\+inicialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Состояние инициализации движка 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ ресурсы загружены 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1engine_ad728463058698a2019e62680b022efdb}\label{classcore_1_1engine_ad728463058698a2019e62680b022efdb}} 
+\index{core::engine@{core::engine}!play@{play}}
+\index{play@{play}!core::engine@{core::engine}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily static void core\+::engine\+::play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1igame}{igame}} \&}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Запуск цикла игры Сначала происходит разовая поптыка инициализации игры, если она не была произведена. Цикл состоит из следующих этапов этапов\+: 
+
+
+\begin{DoxyItemize}
+\item четние событий ввода
+\item изменение данных игрового мира
+\item подготовка видео-\/буфера к заполнению
+\item обработка звука и изображения для нового кадра
+\item переключение видео-\/буфера. 
+\begin{DoxyParams}{Аргументы}
+{\em game} & объект игрового мира \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Всегда используйте данный метод как основной игровой цикл. В ином случае у вас не будет доступа к переключению виде-\/буфера 
+
+Цикл останавливается, когда функция \mbox{\hyperlink{classcore_1_1igame_a2a94fc10f0604fd971fe35511c4177eb}{igame\+::is\+\_\+playing()}} возвращает false; 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classcore_1_1igame_a2a94fc10f0604fd971fe35511c4177eb}{igame\+::is\+\_\+playing()}} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/core/engine.\+h\end{DoxyCompactItemize}

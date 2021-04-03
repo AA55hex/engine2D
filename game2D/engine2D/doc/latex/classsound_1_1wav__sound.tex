@@ -1,0 +1,118 @@
+\hypertarget{classsound_1_1wav__sound}{}\doxysection{Класс sound\+::wav\+\_\+sound}
+\label{classsound_1_1wav__sound}\index{sound::wav\_sound@{sound::wav\_sound}}
+
+
+Звук из wav-\/формата Представляет собой класс, содержащий данные о звуке. Не отвечает за проигрывание звуков, но сожет создавать звуковые дорожки для проигрывания.  
+
+
+
+
+{\ttfamily \#include $<$wav\+\_\+sound.\+h$>$}
+
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback}{playback}}
+\begin{DoxyCompactList}\small\item\em Проигрыватель звука Структура, отвечающая за проигрывание wav\+\_\+sound-\/звука. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsound_1_1wav__sound_a5e3424ba23cfb74ddc22c03dc51c8c6f}{wav\+\_\+sound}} (uint8\+\_\+t $\ast$data, uint32\+\_\+t duration)
+\begin{DoxyCompactList}\small\item\em Создание звука \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback}{playback}} $>$ \mbox{\hyperlink{classsound_1_1wav__sound_afd73aead17b93b89ed5cb078a9d53a0f}{play}} (uint32\+\_\+t pos=0, bool loop=false, playback\+\_\+state state=playback\+\_\+state \+::on\+\_\+play)
+\begin{DoxyCompactList}\small\item\em Создание и запуск звуковой дорожки \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classsound_1_1wav__sound_ad6c275dfa479ba6348c63773d18f2d7e}{get\+\_\+data}} () const
+\begin{DoxyCompactList}\small\item\em Возврат указателя на бинарное представление звука \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classsound_1_1wav__sound_a153e51cbc084a9102c6fa08d58ce0c93}{get\+\_\+duration}} () const
+\begin{DoxyCompactList}\small\item\em Возврат продолжительности звука \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsound_1_1wav__sound_a6f9f330be269da798dd453392f4363f5}\label{classsound_1_1wav__sound_a6f9f330be269da798dd453392f4363f5}} 
+{\bfseries wav\+\_\+sound} (\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&\&)
+\item 
+\mbox{\Hypertarget{classsound_1_1wav__sound_a11ab2bad49e124e631b3cf75fbb61b1d}\label{classsound_1_1wav__sound_a11ab2bad49e124e631b3cf75fbb61b1d}} 
+\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \& {\bfseries operator=} (\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&\&)
+\item 
+\mbox{\Hypertarget{classsound_1_1wav__sound_a6b8b60be64f85efa90ad53513cca1aa5}\label{classsound_1_1wav__sound_a6b8b60be64f85efa90ad53513cca1aa5}} 
+{\bfseries wav\+\_\+sound} (\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&)=delete
+\item 
+\mbox{\Hypertarget{classsound_1_1wav__sound_a8535c5052d81c4054bde0a7bb291a9cd}\label{classsound_1_1wav__sound_a8535c5052d81c4054bde0a7bb291a9cd}} 
+\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \& {\bfseries operator=} (\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Звук из wav-\/формата Представляет собой класс, содержащий данные о звуке. Не отвечает за проигрывание звуков, но сожет создавать звуковые дорожки для проигрывания. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classsound_1_1wav__sound_a5e3424ba23cfb74ddc22c03dc51c8c6f}\label{classsound_1_1wav__sound_a5e3424ba23cfb74ddc22c03dc51c8c6f}} 
+\index{sound::wav\_sound@{sound::wav\_sound}!wav\_sound@{wav\_sound}}
+\index{wav\_sound@{wav\_sound}!sound::wav\_sound@{sound::wav\_sound}}
+\doxysubsubsection{\texorpdfstring{wav\_sound()}{wav\_sound()}}
+{\footnotesize\ttfamily sound\+::wav\+\_\+sound\+::wav\+\_\+sound (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint32\+\_\+t}]{duration }\end{DoxyParamCaption})}
+
+
+
+Создание звука 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em data} & указатель на бинарное представление звука \\
+\hline
+{\em duration} & длительность звука \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classsound_1_1wav__sound_ad6c275dfa479ba6348c63773d18f2d7e}\label{classsound_1_1wav__sound_ad6c275dfa479ba6348c63773d18f2d7e}} 
+\index{sound::wav\_sound@{sound::wav\_sound}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!sound::wav\_sound@{sound::wav\_sound}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ sound\+::wav\+\_\+sound\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возврат указателя на бинарное представление звука 
+
+\begin{DoxyReturn}{Возвращает}
+указатель на бинарное представление звука 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsound_1_1wav__sound_a153e51cbc084a9102c6fa08d58ce0c93}\label{classsound_1_1wav__sound_a153e51cbc084a9102c6fa08d58ce0c93}} 
+\index{sound::wav\_sound@{sound::wav\_sound}!get\_duration@{get\_duration}}
+\index{get\_duration@{get\_duration}!sound::wav\_sound@{sound::wav\_sound}}
+\doxysubsubsection{\texorpdfstring{get\_duration()}{get\_duration()}}
+{\footnotesize\ttfamily uint32\+\_\+t sound\+::wav\+\_\+sound\+::get\+\_\+duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возврат продолжительности звука 
+
+\begin{DoxyReturn}{Возвращает}
+продолжительность звука 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsound_1_1wav__sound_afd73aead17b93b89ed5cb078a9d53a0f}\label{classsound_1_1wav__sound_afd73aead17b93b89ed5cb078a9d53a0f}} 
+\index{sound::wav\_sound@{sound::wav\_sound}!play@{play}}
+\index{play@{play}!sound::wav\_sound@{sound::wav\_sound}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsound_1_1wav__sound_1_1playback}{playback}}$>$ sound\+::wav\+\_\+sound\+::play (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pos = {\ttfamily 0},  }\item[{bool}]{loop = {\ttfamily false},  }\item[{playback\+\_\+state}]{state = {\ttfamily playback\+\_\+state~\+:\+:on\+\_\+play} }\end{DoxyParamCaption})}
+
+
+
+Создание и запуск звуковой дорожки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em pos} & место начала проигрывания \\
+\hline
+{\em loop} & зацикливание \\
+\hline
+{\em state} & начальное состояние \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+звуковая дорожка, загруженная в звуковой буфер 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/sound/wav\+\_\+sound.\+h\end{DoxyCompactItemize}

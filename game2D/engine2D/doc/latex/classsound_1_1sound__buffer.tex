@@ -1,0 +1,107 @@
+\hypertarget{classsound_1_1sound__buffer}{}\doxysection{Класс sound\+::sound\+\_\+buffer}
+\label{classsound_1_1sound__buffer}\index{sound::sound\_buffer@{sound::sound\_buffer}}
+
+
+Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек. Могут использоваться для сохранения состояний нескольких звуковых дорожек одновременно. Активным может быть только один буфер, в то время как остальные замораживают свой звуковой поток.  
+
+
+
+
+{\ttfamily \#include $<$sound\+\_\+buffer.\+h$>$}
+
+\doxysubsection*{Открытые типы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsound_1_1sound__buffer_aa00ad3149fd0e78f81785c5c17ce6d2a}\label{classsound_1_1sound__buffer_aa00ad3149fd0e78f81785c5c17ce6d2a}} 
+using {\bfseries playback\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback}{wav\+\_\+sound\+::playback}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsound_1_1sound__buffer_afc9e871ae9265f211c32f53664777cbc}{sound\+\_\+buffer}} (int silence=0)
+\begin{DoxyCompactList}\small\item\em Инициализация звукового буфера с заданием тишины \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a264b6870c19b474c1f2dd2678f4b431b}\label{classsound_1_1sound__buffer_a264b6870c19b474c1f2dd2678f4b431b}} 
+void \mbox{\hyperlink{classsound_1_1sound__buffer_a264b6870c19b474c1f2dd2678f4b431b}{use}} ()
+\begin{DoxyCompactList}\small\item\em Активация звукового буфера Делает буфер активным, проигрывая его массив звуков \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a926d69368653745efbc21491167d4d70}\label{classsound_1_1sound__buffer_a926d69368653745efbc21491167d4d70}} 
+void \mbox{\hyperlink{classsound_1_1sound__buffer_a926d69368653745efbc21491167d4d70}{detach}} ()
+\begin{DoxyCompactList}\small\item\em Деактивация звукового буфера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsound_1_1sound__buffer_a832efbb2785af43aa409b4a9f687a48c}{push\+\_\+playback}} (playback\+\_\+ptr playback)
+\begin{DoxyCompactList}\small\item\em Добавляет проигрываемую дорожку в конец списка \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a44db890cb15f02fd109cac7024ab233e}\label{classsound_1_1sound__buffer_a44db890cb15f02fd109cac7024ab233e}} 
+void \mbox{\hyperlink{classsound_1_1sound__buffer_a44db890cb15f02fd109cac7024ab233e}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Очищает звуковой поток \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsound_1_1sound__buffer}{sound\+\_\+buffer}} $\ast$ \mbox{\hyperlink{classsound_1_1sound__buffer_a4bdc78b5041a25681a26a584ed78b75d}{current}} ()
+\begin{DoxyCompactList}\small\item\em Возврат активного звукового буфера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a579ba4274b6cb43899b8b2ff961b7de7}\label{classsound_1_1sound__buffer_a579ba4274b6cb43899b8b2ff961b7de7}} 
+void {\bfseries audio\+\_\+callback} (void $\ast$userdata, Uint8 $\ast$stream, int len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Буфер пригрываемых звуков Представлят собой буфер, хранящий массив проигрываемых звуковых дорожек. Могут использоваться для сохранения состояний нескольких звуковых дорожек одновременно. Активным может быть только один буфер, в то время как остальные замораживают свой звуковой поток. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classsound_1_1sound__buffer_afc9e871ae9265f211c32f53664777cbc}\label{classsound_1_1sound__buffer_afc9e871ae9265f211c32f53664777cbc}} 
+\index{sound::sound\_buffer@{sound::sound\_buffer}!sound\_buffer@{sound\_buffer}}
+\index{sound\_buffer@{sound\_buffer}!sound::sound\_buffer@{sound::sound\_buffer}}
+\doxysubsubsection{\texorpdfstring{sound\_buffer()}{sound\_buffer()}}
+{\footnotesize\ttfamily sound\+::sound\+\_\+buffer\+::sound\+\_\+buffer (\begin{DoxyParamCaption}\item[{int}]{silence = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Инициализация звукового буфера с заданием тишины 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em silence} & амплитуда тишины \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Тишина будет проигрываться каждый раз, когда буфер окажется пустым 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a4bdc78b5041a25681a26a584ed78b75d}\label{classsound_1_1sound__buffer_a4bdc78b5041a25681a26a584ed78b75d}} 
+\index{sound::sound\_buffer@{sound::sound\_buffer}!current@{current}}
+\index{current@{current}!sound::sound\_buffer@{sound::sound\_buffer}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsound_1_1sound__buffer}{sound\+\_\+buffer}}$\ast$ sound\+::sound\+\_\+buffer\+::current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Возврат активного звукового буфера 
+
+\begin{DoxyReturn}{Возвращает}
+активный звуковой буфер 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsound_1_1sound__buffer_a832efbb2785af43aa409b4a9f687a48c}\label{classsound_1_1sound__buffer_a832efbb2785af43aa409b4a9f687a48c}} 
+\index{sound::sound\_buffer@{sound::sound\_buffer}!push\_playback@{push\_playback}}
+\index{push\_playback@{push\_playback}!sound::sound\_buffer@{sound::sound\_buffer}}
+\doxysubsubsection{\texorpdfstring{push\_playback()}{push\_playback()}}
+{\footnotesize\ttfamily void sound\+::sound\+\_\+buffer\+::push\+\_\+playback (\begin{DoxyParamCaption}\item[{playback\+\_\+ptr}]{playback }\end{DoxyParamCaption})}
+
+
+
+Добавляет проигрываемую дорожку в конец списка 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em playback} & проигрываемая дорожка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Если playback не является зацикленым, то по окончанию звука от перейдет в состояние on\+\_\+delete и удалится из проигрывателя 
+\end{DoxyNote}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/sound/sound\+\_\+buffer.\+h\end{DoxyCompactItemize}

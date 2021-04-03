@@ -1,0 +1,154 @@
+\hypertarget{classrender_1_1sprite2D}{}\doxysection{Класс render\+::sprite2D}
+\label{classrender_1_1sprite2D}\index{render::sprite2D@{render::sprite2D}}
+
+
+Спрайт Представляет собой абстракцию спрайта для отрисовки.  
+
+
+
+
+{\ttfamily \#include $<$sprite2\+D.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrender_1_1sprite2D_a604cc8b2ab66d699e855eac80db53bb0}{sprite2D}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} $>$ texture, std\+::string subtexture, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} $>$ program)
+\begin{DoxyCompactList}\small\item\em Инициализация спрайта \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}{render}} (const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Отрисовка в back-\/буфер Отрисовывает спрайт в буфер, согласно настройкам. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1sprite2D_a4c484dfcae513e388ce2f0848de9c314}{render}} (const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&settings, const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&f\+\_\+discriptor)
+\begin{DoxyCompactList}\small\item\em Отрисовка в back-\/буфер Отрисовывает спрайт в буфер, согласно настройкам. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1sprite2D_a938a385630289ea207b2ab948a03a530}\label{classrender_1_1sprite2D_a938a385630289ea207b2ab948a03a530}} 
+{\bfseries sprite2D} (\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1sprite2D_a078685c8d19c7f0326ac8c83a3cab7df}\label{classrender_1_1sprite2D_a078685c8d19c7f0326ac8c83a3cab7df}} 
+\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1sprite2D_a855e19aa31a1720f9988af4e722ca8de}\label{classrender_1_1sprite2D_a855e19aa31a1720f9988af4e722ca8de}} 
+{\bfseries sprite2D} (\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1sprite2D_a1fb9b7d670d8d5f1af0e18fd04a56fe9}\label{classrender_1_1sprite2D_a1fb9b7d670d8d5f1af0e18fd04a56fe9}} 
+\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1sprite2D}{sprite2D}} \&)=delete
+\item 
+const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \& \mbox{\hyperlink{classrender_1_1sprite2D_a9faf2ef8b6be72edd48960854ad55da2}{get\+\_\+current\+\_\+frame}} ()
+\begin{DoxyCompactList}\small\item\em Активный дескриптор Возвращет последний использовавшийся описатель области. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Спрайт Представляет собой абстракцию спрайта для отрисовки. 
+
+\begin{DoxyNote}{Заметки}
+Отрисовка спрайта требует определенных имен uniform-\/полей в шейдере\+:
+\begin{DoxyItemize}
+\item s\+\_\+model -\/ mat4, модельная матрица
+\item s\+\_\+texture -\/ sampler2D, указатель на текстуру
+\item s\+\_\+layer -\/ int, слой отрисовки 
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}{sprite2\+D\+::render(const render\+\_\+settings\& settings)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1sprite2D_a604cc8b2ab66d699e855eac80db53bb0}\label{classrender_1_1sprite2D_a604cc8b2ab66d699e855eac80db53bb0}} 
+\index{render::sprite2D@{render::sprite2D}!sprite2D@{sprite2D}}
+\index{sprite2D@{sprite2D}!render::sprite2D@{render::sprite2D}}
+\doxysubsubsection{\texorpdfstring{sprite2D()}{sprite2D()}}
+{\footnotesize\ttfamily render\+::sprite2\+D\+::sprite2D (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1texture2D}{texture2D}} $>$}]{texture,  }\item[{std\+::string}]{subtexture,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} $>$}]{program }\end{DoxyParamCaption})}
+
+
+
+Инициализация спрайта 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em texture} & текстура спрайта \\
+\hline
+{\em subtexture} & подтекстура спрайта \\
+\hline
+{\em program} & шейдерная программа для отрисовки спрайта \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Если texture не содержит подтекстуры с именем subtexture, то используется вся текстура 
+
+После инициализации описатель области примет координаты указанной области 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1sprite2D_a9faf2ef8b6be72edd48960854ad55da2}\label{classrender_1_1sprite2D_a9faf2ef8b6be72edd48960854ad55da2}} 
+\index{render::sprite2D@{render::sprite2D}!get\_current\_frame@{get\_current\_frame}}
+\index{get\_current\_frame@{get\_current\_frame}!render::sprite2D@{render::sprite2D}}
+\doxysubsubsection{\texorpdfstring{get\_current\_frame()}{get\_current\_frame()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}}\& render\+::sprite2\+D\+::get\+\_\+current\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Активный дескриптор Возвращет последний использовавшийся описатель области. 
+
+\begin{DoxyNote}{Заметки}
+После инициализации описатель принимает координаты указанной подтекстуры или текстуры 
+\end{DoxyNote}
+\begin{DoxyReturn}{Возвращает}
+Активный описатель области 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}\label{classrender_1_1sprite2D_a12a48de8b140f3ec93336f5a7b5019d2}} 
+\index{render::sprite2D@{render::sprite2D}!render@{render}}
+\index{render@{render}!render::sprite2D@{render::sprite2D}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void render\+::sprite2\+D\+::render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&}]{settings }\end{DoxyParamCaption})}
+
+
+
+Отрисовка в back-\/буфер Отрисовывает спрайт в буфер, согласно настройкам. 
+
+\begin{DoxyNote}{Заметки}
+в качестве \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}}\textquotesingle{}a используется последний применявшийся дескриптор 
+
+Отрисовка спрайта требует определенных имен uniform-\/полей в шейдере\+:
+\begin{DoxyItemize}
+\item s\+\_\+model -\/ mat4, модельная матрица
+\item s\+\_\+texture -\/ sampler2D, указатель на текстуру
+\item s\+\_\+layer -\/ int, слой отрисовки 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em settings} & свойства отрисовки \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrender_1_1sprite2D_a4c484dfcae513e388ce2f0848de9c314}\label{classrender_1_1sprite2D_a4c484dfcae513e388ce2f0848de9c314}} 
+\index{render::sprite2D@{render::sprite2D}!render@{render}}
+\index{render@{render}!render::sprite2D@{render::sprite2D}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void render\+::sprite2\+D\+::render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrender_1_1render__settings}{render\+\_\+settings}} \&}]{settings,  }\item[{const \mbox{\hyperlink{structrender_1_1frame__descriptor}{frame\+\_\+descriptor}} \&}]{f\+\_\+discriptor }\end{DoxyParamCaption})}
+
+
+
+Отрисовка в back-\/буфер Отрисовывает спрайт в буфер, согласно настройкам. 
+
+\begin{DoxyNote}{Заметки}
+Отрисовка спрайта требует определенных имен uniform-\/полей в шейдере\+:
+\begin{DoxyItemize}
+\item s\+\_\+model -\/ mat4, модельная матрица
+\item s\+\_\+texture -\/ sampler2D, указатель на текстуру
+\item s\+\_\+layer -\/ int, слой отрисовки 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em settings} & свойства отрисовки \\
+\hline
+{\em f\+\_\+discriptor} & описатель диапазона отрисовки в текстуре f\+\_\+discriptor указывает какую именно часть текстуры следует отрисовывать \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+координаты текстуры в f\+\_\+discriptor находятся в диапазоне \mbox{[}0;1\mbox{]} от левого нижнего угла 
+\end{DoxyNote}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/sprite2\+D.\+h\end{DoxyCompactItemize}

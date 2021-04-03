@@ -1,0 +1,151 @@
+\hypertarget{classrender_1_1vertex__buffer}{}\doxysection{Класс render\+::vertex\+\_\+buffer}
+\label{classrender_1_1vertex__buffer}\index{render::vertex\_buffer@{render::vertex\_buffer}}
+
+
+Буфер вершин Оболочка gl-\/буфера вершин. Представляет собой массив произвольных данных, реализация которых описывается вручную. Данный класс должен использоваться как хранилище входных данных рендера и использоваться совместно с \mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}}.  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+buffer.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_a928e7c153796c0d50bbea66580b1fddb}\label{classrender_1_1vertex__buffer_a928e7c153796c0d50bbea66580b1fddb}} 
+\mbox{\hyperlink{classrender_1_1vertex__buffer_a928e7c153796c0d50bbea66580b1fddb}{vertex\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация бустого буфера вершин \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrender_1_1vertex__buffer_ae6986c1185dc1b9ae5bd1b9ac3899ef7}{vertex\+\_\+buffer}} (const unsigned int size, const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Инициализация с заполнением \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Активация буфера вершин Привязывает буфер вершин к контексту, делая его активным. Одновременно активен только один буфер вершин. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_ae65411c8f8c2f1d25776bde2d39975c9}\label{classrender_1_1vertex__buffer_ae65411c8f8c2f1d25776bde2d39975c9}} 
+void \mbox{\hyperlink{classrender_1_1vertex__buffer_ae65411c8f8c2f1d25776bde2d39975c9}{detach}} () const
+\begin{DoxyCompactList}\small\item\em Деактивация буфера Деактивирует буфер вершин, привязывая стандартный буфер \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1vertex__buffer_aba636aafe5ac5880a6b1625387605988}{restore}} (const unsigned int size, const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Перезагрузка буфера Сбрасывает массив данных в буфере и создает новый, заполняя его новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1vertex__buffer_a83052379c675cdeee80ebb68eaa2cd89}{update}} (const unsigned int size, const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Изменение буфера Перезаписывает данные буфера, начиная с первого элемента массива новыми данными. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_aa6218e65891d72002b383997dba7916d}\label{classrender_1_1vertex__buffer_aa6218e65891d72002b383997dba7916d}} 
+{\bfseries vertex\+\_\+buffer} (\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_a4b38ae01d2bbc964e96051f0df6f906e}\label{classrender_1_1vertex__buffer_a4b38ae01d2bbc964e96051f0df6f906e}} 
+\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_aa1958a20353c8c3b751cbf241ed55c8f}\label{classrender_1_1vertex__buffer_aa1958a20353c8c3b751cbf241ed55c8f}} 
+{\bfseries vertex\+\_\+buffer} (\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_a74fb3018103021a97286825a941f4adb}\label{classrender_1_1vertex__buffer_a74fb3018103021a97286825a941f4adb}} 
+\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Буфер вершин Оболочка gl-\/буфера вершин. Представляет собой массив произвольных данных, реализация которых описывается вручную. Данный класс должен использоваться как хранилище входных данных рендера и использоваться совместно с \mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}}. 
+
+\begin{DoxyNote}{Заметки}
+Все взаимодействия с буфером вершин следует проводить опосредованно, с помощью \mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1vertex__array}{render\+::vertex\+\_\+array}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Заметки}
+Все динамические данные, поступающие в класс могут быть удалены после инициализации, так как они полностью копируются в память видеокарты. 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_ae6986c1185dc1b9ae5bd1b9ac3899ef7}\label{classrender_1_1vertex__buffer_ae6986c1185dc1b9ae5bd1b9ac3899ef7}} 
+\index{render::vertex\_buffer@{render::vertex\_buffer}!vertex\_buffer@{vertex\_buffer}}
+\index{vertex\_buffer@{vertex\_buffer}!render::vertex\_buffer@{render::vertex\_buffer}}
+\doxysubsubsection{\texorpdfstring{vertex\_buffer()}{vertex\_buffer()}}
+{\footnotesize\ttfamily render\+::vertex\+\_\+buffer\+::vertex\+\_\+buffer (\begin{DoxyParamCaption}\item[{const unsigned int}]{size,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Инициализация с заполнением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & размер данных в байтах \\
+\hline
+{\em data} & указатель на загружаемые данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Данные data могут быть удалены после инициализации 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}\label{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}} 
+\index{render::vertex\_buffer@{render::vertex\_buffer}!bind@{bind}}
+\index{bind@{bind}!render::vertex\_buffer@{render::vertex\_buffer}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void render\+::vertex\+\_\+buffer\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Активация буфера вершин Привязывает буфер вершин к контексту, делая его активным. Одновременно активен только один буфер вершин. 
+
+\begin{DoxyNote}{Заметки}
+Не используйте данную функцию непосредственно, вместо этого используйте \mbox{\hyperlink{classrender_1_1vertex__array_a6604bb01bedb2f4f969bdd014bfa3357}{render\+::vertex\+\_\+array\+::bind\+\_\+vertex\+\_\+buffer}}(const \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}}\& buffer, const \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor}{vertex\+\_\+buffer\+\_\+descriptor}}\& descriptor) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1vertex__array_a6604bb01bedb2f4f969bdd014bfa3357}{render\+::vertex\+\_\+array\+::bind\+\_\+vertex\+\_\+buffer}}(const \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}}\& buffer, const \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor}{vertex\+\_\+buffer\+\_\+descriptor}}\& descriptor) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_aba636aafe5ac5880a6b1625387605988}\label{classrender_1_1vertex__buffer_aba636aafe5ac5880a6b1625387605988}} 
+\index{render::vertex\_buffer@{render::vertex\_buffer}!restore@{restore}}
+\index{restore@{restore}!render::vertex\_buffer@{render::vertex\_buffer}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily void render\+::vertex\+\_\+buffer\+::restore (\begin{DoxyParamCaption}\item[{const unsigned int}]{size,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Перезагрузка буфера Сбрасывает массив данных в буфере и создает новый, заполняя его новыми данными. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & размер данных в байтах \\
+\hline
+{\em data} & указатель на загружаемые данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Данные data могут быть удалены после использования 
+
+Буфер автоматически выполняет команду \mbox{\hyperlink{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}{render\+::vertex\+\_\+buffer\+::bind()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}{render\+::vertex\+\_\+buffer\+::bind()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer_a83052379c675cdeee80ebb68eaa2cd89}\label{classrender_1_1vertex__buffer_a83052379c675cdeee80ebb68eaa2cd89}} 
+\index{render::vertex\_buffer@{render::vertex\_buffer}!update@{update}}
+\index{update@{update}!render::vertex\_buffer@{render::vertex\_buffer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void render\+::vertex\+\_\+buffer\+::update (\begin{DoxyParamCaption}\item[{const unsigned int}]{size,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Изменение буфера Перезаписывает данные буфера, начиная с первого элемента массива новыми данными. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & размер данных в байтах \\
+\hline
+{\em data} & указатель на загружаемые данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+Данные data могут быть удалены после использования 
+
+Буфер автоматически выполняет команду \mbox{\hyperlink{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}{render\+::vertex\+\_\+buffer\+::bind()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1vertex__buffer_a462bdc817388079f2f02973f8054d6df}{render\+::vertex\+\_\+buffer\+::bind()}} 
+\end{DoxySeeAlso}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/vertex\+\_\+buffer.\+h\end{DoxyCompactItemize}

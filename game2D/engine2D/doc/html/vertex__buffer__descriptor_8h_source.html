@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/render/vertex_buffer_descriptor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ada157988d47c0ed8971be2c0e2fe61c.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vertex_buffer_descriptor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__buffer__descriptor.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrender_1_1vertex__buffer__descriptor.html">vertex_buffer_descriptor</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html">   24</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html">element_descriptor</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a682831648647be9d897047e296b6f005">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a682831648647be9d897047e296b6f005">count</a>;  </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a265dd322aa5d90e9ca9e066b3ac509fb">   27</a></span>&#160;    GLenum <a class="code" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a265dd322aa5d90e9ca9e066b3ac509fb">type</a>;      </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a3602bb2ea69af47da5c6f3ebae3dcdcf">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a3602bb2ea69af47da5c6f3ebae3dcdcf">normalized</a>;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a88a157f73bfff040b270605719b8881e">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a88a157f73bfff040b270605719b8881e">size</a>;  </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__buffer__descriptor.html#a0f84ef0763518f39210aa327a3a3174f">   35</a></span>&#160;  <a class="code" href="classrender_1_1vertex__buffer__descriptor.html#a0f84ef0763518f39210aa327a3a3174f">vertex_buffer_descriptor</a>() {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__buffer__descriptor.html#ac9ebf9b7cbfdf8247559b05629046832">   42</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrender_1_1vertex__buffer__descriptor.html#ac9ebf9b7cbfdf8247559b05629046832">get_stride</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> stride; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__buffer__descriptor.html#a22a579674432ca43308900ebc6336c8e">   53</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1vertex__buffer__descriptor.html#a22a579674432ca43308900ebc6336c8e">add_element_descriptor_float</a>(<span class="keywordtype">int</span> count, <span class="keywordtype">bool</span> normalized);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__buffer__descriptor.html#a0c51ea493f98820c3708a77e7311ab2b">   58</a></span>&#160;  <span class="keyword">const</span> std::vector&lt;element_descriptor&gt;&amp; <a class="code" href="classrender_1_1vertex__buffer__descriptor.html#a0c51ea493f98820c3708a77e7311ab2b">get_descriptors</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> descriptors;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">int</span> stride{};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::vector&lt;element_descriptor&gt; descriptors{};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}  <span class="comment">// namespace render</span></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html">render::vertex_buffer_descriptor</a></div><div class="ttdoc">Описатель вершины Класс, хранящий метаданные вершины какого-либо вершинного буфера....</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:16</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html_a0c51ea493f98820c3708a77e7311ab2b"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html#a0c51ea493f98820c3708a77e7311ab2b">render::vertex_buffer_descriptor::get_descriptors</a></div><div class="ttdeci">const std::vector&lt; element_descriptor &gt; &amp; get_descriptors() const</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:58</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html_a0f84ef0763518f39210aa327a3a3174f"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html#a0f84ef0763518f39210aa327a3a3174f">render::vertex_buffer_descriptor::vertex_buffer_descriptor</a></div><div class="ttdeci">vertex_buffer_descriptor()</div><div class="ttdoc">Инициализация описателя вершины</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:35</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html_a22a579674432ca43308900ebc6336c8e"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html#a22a579674432ca43308900ebc6336c8e">render::vertex_buffer_descriptor::add_element_descriptor_float</a></div><div class="ttdeci">void add_element_descriptor_float(int count, bool normalized)</div><div class="ttdoc">Добавить описатель одного следующего атрибута элемента в конец списка</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html_ac9ebf9b7cbfdf8247559b05629046832"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html#ac9ebf9b7cbfdf8247559b05629046832">render::vertex_buffer_descriptor::get_stride</a></div><div class="ttdeci">int get_stride() const</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:42</div></div>
+<div class="ttc" id="astructrender_1_1vertex__buffer__descriptor_1_1element__descriptor_html"><div class="ttname"><a href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html">render::vertex_buffer_descriptor::element_descriptor</a></div><div class="ttdoc">Метаданные входного атрибута вершины Воспомогательная внутренняя структура, хранящая метаданные отдел...</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:25</div></div>
+<div class="ttc" id="astructrender_1_1vertex__buffer__descriptor_1_1element__descriptor_html_a265dd322aa5d90e9ca9e066b3ac509fb"><div class="ttname"><a href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a265dd322aa5d90e9ca9e066b3ac509fb">render::vertex_buffer_descriptor::element_descriptor::type</a></div><div class="ttdeci">GLenum type</div><div class="ttdoc">соответствующий gl-тип данных</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:27</div></div>
+<div class="ttc" id="astructrender_1_1vertex__buffer__descriptor_1_1element__descriptor_html_a3602bb2ea69af47da5c6f3ebae3dcdcf"><div class="ttname"><a href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a3602bb2ea69af47da5c6f3ebae3dcdcf">render::vertex_buffer_descriptor::element_descriptor::normalized</a></div><div class="ttdeci">bool normalized</div><div class="ttdoc">необходимость в нормализации данных при рендере</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:28</div></div>
+<div class="ttc" id="astructrender_1_1vertex__buffer__descriptor_1_1element__descriptor_html_a682831648647be9d897047e296b6f005"><div class="ttname"><a href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a682831648647be9d897047e296b6f005">render::vertex_buffer_descriptor::element_descriptor::count</a></div><div class="ttdeci">int count</div><div class="ttdoc">количество элементов заданного типа</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:26</div></div>
+<div class="ttc" id="astructrender_1_1vertex__buffer__descriptor_1_1element__descriptor_html_a88a157f73bfff040b270605719b8881e"><div class="ttname"><a href="structrender_1_1vertex__buffer__descriptor_1_1element__descriptor.html#a88a157f73bfff040b270605719b8881e">render::vertex_buffer_descriptor::element_descriptor::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">общий размер, занимаемый данным атрибутом в байтах</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,105 @@
+\hypertarget{classrender_1_1vertex__array}{}\doxysection{Класс render\+::vertex\+\_\+array}
+\label{classrender_1_1vertex__array}\index{render::vertex\_array@{render::vertex\_array}}
+
+
+Массив атрибутов вершин (vao) Данный класс представляет собой оболочку вокруг соответствующей gl-\/структуры. Каждый vao-\/объект сохраняет информацию об активных атрибутах и вершинах, из которых будут браться данные для атрибутов. Разные vao имеют разные привязанные буферы и вершины и не зависят друг от друга  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+array.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrender_1_1vertex__array_ab6e5cd3ffefbe59d91ad0fb951e8cac5}{vertex\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация vao. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_a661331996cb77378e431e020b06512b5}\label{classrender_1_1vertex__array_a661331996cb77378e431e020b06512b5}} 
+void \mbox{\hyperlink{classrender_1_1vertex__array_a661331996cb77378e431e020b06512b5}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Активация vao Делакет vao активным. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_a334b320a7bb73baf9603bfac3865d248}\label{classrender_1_1vertex__array_a334b320a7bb73baf9603bfac3865d248}} 
+void \mbox{\hyperlink{classrender_1_1vertex__array_a334b320a7bb73baf9603bfac3865d248}{detach}} () const
+\begin{DoxyCompactList}\small\item\em Деактивация vao Делает активной стандартный vao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1vertex__array_a6604bb01bedb2f4f969bdd014bfa3357}{bind\+\_\+vertex\+\_\+buffer}} (const \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&buffer, const \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor}{vertex\+\_\+buffer\+\_\+descriptor}} \&descriptor)
+\begin{DoxyCompactList}\small\item\em Привязка вершинного буфера к vao Привязывает буфер вершин к своему контексту, описывая передаваемые атрибуты буфера с помощью декстриптора \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classrender_1_1vertex__array_a651505879d862fd466aaf08b48eeb262}{get\+\_\+attributes\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество используемых атрибутов vao. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_ac0aab9519fc050f530857960cf3738ba}\label{classrender_1_1vertex__array_ac0aab9519fc050f530857960cf3738ba}} 
+{\bfseries vertex\+\_\+array} (\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_a515d4a83c3f5d17cdfc1d260bdb1a3d4}\label{classrender_1_1vertex__array_a515d4a83c3f5d17cdfc1d260bdb1a3d4}} 
+\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_ac030c214d1729538eb9a1d852456197d}\label{classrender_1_1vertex__array_ac030c214d1729538eb9a1d852456197d}} 
+{\bfseries vertex\+\_\+array} (\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__array_ab1bfaf9b1211cfeac13ee69b38bf6078}\label{classrender_1_1vertex__array_ab1bfaf9b1211cfeac13ee69b38bf6078}} 
+\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1vertex__array}{vertex\+\_\+array}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Массив атрибутов вершин (vao) Данный класс представляет собой оболочку вокруг соответствующей gl-\/структуры. Каждый vao-\/объект сохраняет информацию об активных атрибутах и вершинах, из которых будут браться данные для атрибутов. Разные vao имеют разные привязанные буферы и вершины и не зависят друг от друга 
+
+\begin{DoxyNote}{Заметки}
+Не работайте с вершинными буфермаи и буферами индексов без использования vertex\+\_\+array-\/объекта. Не используйте стандартный vao-\/объект для своих целей. 
+
+При взаимподействии с \mbox{\hyperlink{classrender_1_1vertex__buffer}{render\+::vertex\+\_\+buffer}} всегда будьте уверены, что \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} будет существовать до удаления vao-\/объекта 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1vertex__array_ab6e5cd3ffefbe59d91ad0fb951e8cac5}\label{classrender_1_1vertex__array_ab6e5cd3ffefbe59d91ad0fb951e8cac5}} 
+\index{render::vertex\_array@{render::vertex\_array}!vertex\_array@{vertex\_array}}
+\index{vertex\_array@{vertex\_array}!render::vertex\_array@{render::vertex\_array}}
+\doxysubsubsection{\texorpdfstring{vertex\_array()}{vertex\_array()}}
+{\footnotesize\ttfamily render\+::vertex\+\_\+array\+::vertex\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Инициализация vao. 
+
+\begin{DoxyNote}{Заметки}
+После инициализации созданный vao станет активным 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1vertex__array_a6604bb01bedb2f4f969bdd014bfa3357}\label{classrender_1_1vertex__array_a6604bb01bedb2f4f969bdd014bfa3357}} 
+\index{render::vertex\_array@{render::vertex\_array}!bind\_vertex\_buffer@{bind\_vertex\_buffer}}
+\index{bind\_vertex\_buffer@{bind\_vertex\_buffer}!render::vertex\_array@{render::vertex\_array}}
+\doxysubsubsection{\texorpdfstring{bind\_vertex\_buffer()}{bind\_vertex\_buffer()}}
+{\footnotesize\ttfamily void render\+::vertex\+\_\+array\+::bind\+\_\+vertex\+\_\+buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} \&}]{buffer,  }\item[{const \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor}{vertex\+\_\+buffer\+\_\+descriptor}} \&}]{descriptor }\end{DoxyParamCaption})}
+
+
+
+Привязка вершинного буфера к vao Привязывает буфер вершин к своему контексту, описывая передаваемые атрибуты буфера с помощью декстриптора 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & привязываемый вершинный буфер \\
+\hline
+{\em descriptor} & описатель вершинного буфера После привязки буфера вершин, vao-\/буфер сохранит правила загрузки данных из буфера в атрибуты \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+При взаимподействии с \mbox{\hyperlink{classrender_1_1vertex__buffer}{render\+::vertex\+\_\+buffer}} всегда будьте уверены, что \mbox{\hyperlink{classrender_1_1vertex__buffer}{vertex\+\_\+buffer}} будет существовать до удаления vao-\/объекта. Лучше всего хранить их в виде полей класса. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classrender_1_1vertex__array_a651505879d862fd466aaf08b48eeb262}\label{classrender_1_1vertex__array_a651505879d862fd466aaf08b48eeb262}} 
+\index{render::vertex\_array@{render::vertex\_array}!get\_attributes\_count@{get\_attributes\_count}}
+\index{get\_attributes\_count@{get\_attributes\_count}!render::vertex\_array@{render::vertex\_array}}
+\doxysubsubsection{\texorpdfstring{get\_attributes\_count()}{get\_attributes\_count()}}
+{\footnotesize\ttfamily unsigned int render\+::vertex\+\_\+array\+::get\+\_\+attributes\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает количество используемых атрибутов vao. 
+
+\begin{DoxyReturn}{Возвращает}
+Количество используемых атрибутов vao 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/vertex\+\_\+array.\+h\end{DoxyCompactItemize}

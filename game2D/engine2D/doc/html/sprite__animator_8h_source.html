@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/render/sprite_animator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ada157988d47c0ed8971be2c0e2fe61c.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sprite_animator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;render/frame_structures.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span>sprite2D;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrender_1_1sprite__animator.html">sprite_animator</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structrender_1_1sprite__animator_1_1frame.html">   21</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structrender_1_1sprite__animator_1_1frame.html">frame</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structrender_1_1sprite__animator_1_1frame.html#a488cd6f1a7b06816055c1e6cc5bd0234">   23</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a> <a class="code" href="structrender_1_1sprite__animator_1_1frame.html#a488cd6f1a7b06816055c1e6cc5bd0234">discriptor</a>;  </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structrender_1_1sprite__animator_1_1frame.html#ae272ab9b6be767a48efbcaef7c766ef2">   24</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structrender_1_1sprite__animator_1_1frame.html#ae272ab9b6be767a48efbcaef7c766ef2">duration</a>{0};  </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#aca0901efdcc58d503327d72241fa1130">   31</a></span>&#160;  <a class="code" href="classrender_1_1sprite__animator.html#aca0901efdcc58d503327d72241fa1130">sprite_animator</a>(std::shared_ptr&lt;sprite2D&gt; sprite);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#a10cc22aa01c2cc1d4bd60130f858a853">   39</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1sprite__animator.html#a10cc22aa01c2cc1d4bd60130f858a853">update</a>(<span class="keywordtype">double</span> duration);</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#acecf9b6fa6516b77dfbf4f2ea419fd66">   47</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1sprite__animator.html#acecf9b6fa6516b77dfbf4f2ea419fd66">render</a>(<span class="keyword">const</span> <a class="code" href="structrender_1_1render__settings.html">render_settings</a>&amp; settings);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#a7d2433371f30a47e0dbd32005260af5e">   56</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1sprite__animator.html#a7d2433371f30a47e0dbd32005260af5e">add_frame</a>(<span class="keyword">const</span> <a class="code" href="structrender_1_1frame__descriptor.html">frame_descriptor</a>&amp; discriptor, <span class="keywordtype">double</span> duration);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#ae21d7ab0ff85492152a43ad653dbdf2a">   62</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1sprite__animator.html#ae21d7ab0ff85492152a43ad653dbdf2a">clear_frames</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#aadec3da2f542f8f5f6b9fff413512642">   68</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="structrender_1_1sprite__animator_1_1frame.html">frame</a>* <a class="code" href="classrender_1_1sprite__animator.html#aadec3da2f542f8f5f6b9fff413512642">current_frame</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#a24207d6bfd21efa16fe6d2fc8a19b0ae">   74</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classrender_1_1sprite__animator.html#a24207d6bfd21efa16fe6d2fc8a19b0ae">get_frames_count</a>() { <span class="keywordflow">return</span> frames.size(); }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classrender_1_1sprite__animator.html#aa1a459f6c170ec38b91d82303baa5e9b">   80</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classrender_1_1sprite__animator.html#aa1a459f6c170ec38b91d82303baa5e9b">get_duration</a>() { <span class="keywordflow">return</span> summary_duration; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  std::shared_ptr&lt;sprite2D&gt; sprite;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::vector&lt;frame&gt; frames{};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">size_t</span> current_frame_index{0};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">double</span> current_duration{0};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">double</span> summary_duration{0};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}  <span class="comment">// namespace render</span></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html"><div class="ttname"><a href="classrender_1_1sprite__animator.html">render::sprite_animator</a></div><div class="ttdoc">Аниматор спрайта</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:15</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_a10cc22aa01c2cc1d4bd60130f858a853"><div class="ttname"><a href="classrender_1_1sprite__animator.html#a10cc22aa01c2cc1d4bd60130f858a853">render::sprite_animator::update</a></div><div class="ttdeci">void update(double duration)</div><div class="ttdoc">Обновление состояния анимации</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_a24207d6bfd21efa16fe6d2fc8a19b0ae"><div class="ttname"><a href="classrender_1_1sprite__animator.html#a24207d6bfd21efa16fe6d2fc8a19b0ae">render::sprite_animator::get_frames_count</a></div><div class="ttdeci">size_t get_frames_count()</div><div class="ttdoc">Возарвт количества кадров в аниматоре</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:74</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_a7d2433371f30a47e0dbd32005260af5e"><div class="ttname"><a href="classrender_1_1sprite__animator.html#a7d2433371f30a47e0dbd32005260af5e">render::sprite_animator::add_frame</a></div><div class="ttdeci">void add_frame(const frame_descriptor &amp;discriptor, double duration)</div><div class="ttdoc">Добавление фрейма в конец списка кадров</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_aa1a459f6c170ec38b91d82303baa5e9b"><div class="ttname"><a href="classrender_1_1sprite__animator.html#aa1a459f6c170ec38b91d82303baa5e9b">render::sprite_animator::get_duration</a></div><div class="ttdeci">double get_duration()</div><div class="ttdoc">Возврат общей продолжительности анимации</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:80</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_aadec3da2f542f8f5f6b9fff413512642"><div class="ttname"><a href="classrender_1_1sprite__animator.html#aadec3da2f542f8f5f6b9fff413512642">render::sprite_animator::current_frame</a></div><div class="ttdeci">const frame * current_frame()</div><div class="ttdoc">Возврат активного кадра</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_aca0901efdcc58d503327d72241fa1130"><div class="ttname"><a href="classrender_1_1sprite__animator.html#aca0901efdcc58d503327d72241fa1130">render::sprite_animator::sprite_animator</a></div><div class="ttdeci">sprite_animator(std::shared_ptr&lt; sprite2D &gt; sprite)</div><div class="ttdoc">Инициализация аниматора</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_acecf9b6fa6516b77dfbf4f2ea419fd66"><div class="ttname"><a href="classrender_1_1sprite__animator.html#acecf9b6fa6516b77dfbf4f2ea419fd66">render::sprite_animator::render</a></div><div class="ttdeci">void render(const render_settings &amp;settings)</div><div class="ttdoc">Отрисовка активного фрейма</div></div>
+<div class="ttc" id="aclassrender_1_1sprite__animator_html_ae21d7ab0ff85492152a43ad653dbdf2a"><div class="ttname"><a href="classrender_1_1sprite__animator.html#ae21d7ab0ff85492152a43ad653dbdf2a">render::sprite_animator::clear_frames</a></div><div class="ttdeci">void clear_frames()</div><div class="ttdoc">Удаление списка кадров Очищает весь список кадров</div></div>
+<div class="ttc" id="astructrender_1_1frame__descriptor_html"><div class="ttname"><a href="structrender_1_1frame__descriptor.html">render::frame_descriptor</a></div><div class="ttdoc">Описатель области текстуры или текстурного атласа</div><div class="ttdef"><b>Definition:</b> frame_structures.h:11</div></div>
+<div class="ttc" id="astructrender_1_1render__settings_html"><div class="ttname"><a href="structrender_1_1render__settings.html">render::render_settings</a></div><div class="ttdoc">Найстройка отрисовки Воспомогательная структура для отрсовки спрайтов</div><div class="ttdef"><b>Definition:</b> frame_structures.h:22</div></div>
+<div class="ttc" id="astructrender_1_1sprite__animator_1_1frame_html"><div class="ttname"><a href="structrender_1_1sprite__animator_1_1frame.html">render::sprite_animator::frame</a></div><div class="ttdoc">Фрейм анимации Воспомогательная структура, согласно которой отрисовывается спрайт</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:22</div></div>
+<div class="ttc" id="astructrender_1_1sprite__animator_1_1frame_html_a488cd6f1a7b06816055c1e6cc5bd0234"><div class="ttname"><a href="structrender_1_1sprite__animator_1_1frame.html#a488cd6f1a7b06816055c1e6cc5bd0234">render::sprite_animator::frame::discriptor</a></div><div class="ttdeci">const frame_descriptor discriptor</div><div class="ttdoc">описатель области кадра</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:23</div></div>
+<div class="ttc" id="astructrender_1_1sprite__animator_1_1frame_html_ae272ab9b6be767a48efbcaef7c766ef2"><div class="ttname"><a href="structrender_1_1sprite__animator_1_1frame.html#ae272ab9b6be767a48efbcaef7c766ef2">render::sprite_animator::frame::duration</a></div><div class="ttdeci">double duration</div><div class="ttdoc">длительность кадра в миллисекундах</div><div class="ttdef"><b>Definition:</b> sprite_animator.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

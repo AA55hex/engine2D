@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Класс render::renderer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>render</b></li><li class="navelem"><a class="el" href="classrender_1_1renderer.html">renderer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classrender_1_1renderer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс render::renderer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Рендер-менеджер Статический класс, предоставляющий интерфейс рендера изображения  
+ <a href="classrender_1_1renderer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="renderer_8h_source.html">renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a1053d9d3251cf47c566d9f65a1834509"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1renderer.html#a1053d9d3251cf47c566d9f65a1834509">draw</a> (const <a class="el" href="classrender_1_1vertex__array.html">vertex_array</a> &amp;vao, const <a class="el" href="classrender_1_1index__buffer.html">index_buffer</a> &amp;vebo, const <a class="el" href="classrender_1_1shader__program.html">shader_program</a> &amp;program, GLenum mode=GL_TRIANGLES)</td></tr>
+<tr class="memdesc:a1053d9d3251cf47c566d9f65a1834509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовка в back-буфер  <a href="classrender_1_1renderer.html#a1053d9d3251cf47c566d9f65a1834509">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1053d9d3251cf47c566d9f65a1834509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa13c485d05491335f33b5a644bfe5a9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1renderer.html#aaa13c485d05491335f33b5a644bfe5a9">set_viewport</a> (int x, int y, int width, int height)</td></tr>
+<tr class="memdesc:aaa13c485d05491335f33b5a644bfe5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задать диапазон для отрисовки Задает диапазон, в границах которого будет расчитываться отрисовка Границы отрисовки указываются не нормализованными значениями.  <a href="classrender_1_1renderer.html#aaa13c485d05491335f33b5a644bfe5a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa13c485d05491335f33b5a644bfe5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25ab04c60fe91d9180219ccc813db64"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1renderer.html#ae25ab04c60fe91d9180219ccc813db64">clear_color</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:ae25ab04c60fe91d9180219ccc813db64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить цвет очистки экрана Устанавливает, каким цветом будет заполняться буфер экрана при вызове <a class="el" href="classrender_1_1renderer.html#af721dea6369e567f5ef3f735b0e55686" title="Очистка back-буфера Очищает буфер, который будет заполняться, цветом, указанным в renderer::clear_col...">renderer::clear()</a>  <a href="classrender_1_1renderer.html#ae25ab04c60fe91d9180219ccc813db64">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae25ab04c60fe91d9180219ccc813db64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af721dea6369e567f5ef3f735b0e55686"><td class="memItemLeft" align="right" valign="top"><a id="af721dea6369e567f5ef3f735b0e55686"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrender_1_1renderer.html#af721dea6369e567f5ef3f735b0e55686">clear</a> ()</td></tr>
+<tr class="memdesc:af721dea6369e567f5ef3f735b0e55686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистка back-буфера Очищает буфер, который будет заполняться, цветом, указанным в <a class="el" href="classrender_1_1renderer.html#ae25ab04c60fe91d9180219ccc813db64" title="Установить цвет очистки экрана Устанавливает, каким цветом будет заполняться буфер экрана при вызове ...">renderer::clear_color(float r, float g, float b, float a)</a> <br /></td></tr>
+<tr class="separator:af721dea6369e567f5ef3f735b0e55686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Рендер-менеджер Статический класс, предоставляющий интерфейс рендера изображения </p>
+<dl class="section note"><dt>Заметки</dt><dd>Перед использование необходима инициализация ресурсов в классе <a class="el" href="classcore_1_1engine.html" title="Центральный класс игрового движка Класс предоставляет интерфейс взаимодействия с интерфейсом igame....">core::engine</a> </dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ae25ab04c60fe91d9180219ccc813db64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25ab04c60fe91d9180219ccc813db64">&#9670;&nbsp;</a></span>clear_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void render::renderer::clear_color </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Установить цвет очистки экрана Устанавливает, каким цветом будет заполняться буфер экрана при вызове <a class="el" href="classrender_1_1renderer.html#af721dea6369e567f5ef3f735b0e55686" title="Очистка back-буфера Очищает буфер, который будет заполняться, цветом, указанным в renderer::clear_col...">renderer::clear()</a> </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>red-канал </td></tr>
+    <tr><td class="paramname">g</td><td>green-канал </td></tr>
+    <tr><td class="paramname">b</td><td>blue-канал </td></tr>
+    <tr><td class="paramname">a</td><td>alpha-канал </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1053d9d3251cf47c566d9f65a1834509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1053d9d3251cf47c566d9f65a1834509">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void render::renderer::draw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classrender_1_1vertex__array.html">vertex_array</a> &amp;&#160;</td>
+          <td class="paramname"><em>vao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classrender_1_1index__buffer.html">index_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>vebo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classrender_1_1shader__program.html">shader_program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>GL_TRIANGLES</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отрисовка в back-буфер </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vao</td><td>используемый массив атрибутов </td></tr>
+    <tr><td class="paramname">vebo</td><td>используемый массив индексов </td></tr>
+    <tr><td class="paramname">program</td><td>используемая шейдерная программа </td></tr>
+    <tr><td class="paramname">mode</td><td>режим отрисовки </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa13c485d05491335f33b5a644bfe5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa13c485d05491335f33b5a644bfe5a9">&#9670;&nbsp;</a></span>set_viewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void render::renderer::set_viewport </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Задать диапазон для отрисовки Задает диапазон, в границах которого будет расчитываться отрисовка Границы отрисовки указываются не нормализованными значениями. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Начало оси координат находится в левом верхнем углу. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>положение точки по оси абсцисс </td></tr>
+    <tr><td class="paramname">y</td><td>положение точки по оси ординат </td></tr>
+    <tr><td class="paramname">width</td><td>ширина области </td></tr>
+    <tr><td class="paramname">height</td><td>высота области </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/render/<a class="el" href="renderer_8h_source.html">renderer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

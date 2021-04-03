@@ -1,0 +1,90 @@
+\hypertarget{classrender_1_1vertex__buffer__descriptor}{}\doxysection{Класс render\+::vertex\+\_\+buffer\+\_\+descriptor}
+\label{classrender_1_1vertex__buffer__descriptor}\index{render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}}
+
+
+Описатель вершины Класс, хранящий метаданные вершины какого-\/либо вершинного буфера. Используется для взаимодействия \mbox{\hyperlink{classrender_1_1vertex__array}{render\+::vertex\+\_\+array}} и \mbox{\hyperlink{classrender_1_1vertex__buffer}{render\+::vertex\+\_\+buffer}} Согласно описателю, в vao-\/буфере будут зарезервированы входные атрибуты для шейдерной программы  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+buffer\+\_\+descriptor.\+h$>$}
+
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrender_1_1vertex__buffer__descriptor_1_1element__descriptor}{element\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em Метаданные входного атрибута вершины Воспомогательная внутренняя структура, хранящая метаданные отдельного атрибута вершины. Исходя из данных, происходит надстройка входящего атрибута шейдерной программы \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrender_1_1vertex__buffer__descriptor_a0f84ef0763518f39210aa327a3a3174f}\label{classrender_1_1vertex__buffer__descriptor_a0f84ef0763518f39210aa327a3a3174f}} 
+\mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor_a0f84ef0763518f39210aa327a3a3174f}{vertex\+\_\+buffer\+\_\+descriptor}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация описателя вершины \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor_ac9ebf9b7cbfdf8247559b05629046832}{get\+\_\+stride}} () const
+\item 
+void \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor_a22a579674432ca43308900ebc6336c8e}{add\+\_\+element\+\_\+descriptor\+\_\+float}} (int count, bool normalized)
+\begin{DoxyCompactList}\small\item\em Добавить описатель одного следующего атрибута элемента в конец списка \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structrender_1_1vertex__buffer__descriptor_1_1element__descriptor}{element\+\_\+descriptor}} $>$ \& \mbox{\hyperlink{classrender_1_1vertex__buffer__descriptor_a0c51ea493f98820c3708a77e7311ab2b}{get\+\_\+descriptors}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Описатель вершины Класс, хранящий метаданные вершины какого-\/либо вершинного буфера. Используется для взаимодействия \mbox{\hyperlink{classrender_1_1vertex__array}{render\+::vertex\+\_\+array}} и \mbox{\hyperlink{classrender_1_1vertex__buffer}{render\+::vertex\+\_\+buffer}} Согласно описателю, в vao-\/буфере будут зарезервированы входные атрибуты для шейдерной программы 
+
+\begin{DoxyNote}{Заметки}
+Последовательность описателей атрибутов имеет значение 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{structrender_1_1vertex__buffer__descriptor_1_1element__descriptor}{render\+::vertex\+\_\+buffer\+\_\+descriptor\+::element\+\_\+descriptor}} 
+
+\mbox{\hyperlink{classrender_1_1vertex__array}{render\+::vertex\+\_\+array}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer__descriptor_a22a579674432ca43308900ebc6336c8e}\label{classrender_1_1vertex__buffer__descriptor_a22a579674432ca43308900ebc6336c8e}} 
+\index{render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}!add\_element\_descriptor\_float@{add\_element\_descriptor\_float}}
+\index{add\_element\_descriptor\_float@{add\_element\_descriptor\_float}!render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}}
+\doxysubsubsection{\texorpdfstring{add\_element\_descriptor\_float()}{add\_element\_descriptor\_float()}}
+{\footnotesize\ttfamily void render\+::vertex\+\_\+buffer\+\_\+descriptor\+::add\+\_\+element\+\_\+descriptor\+\_\+float (\begin{DoxyParamCaption}\item[{int}]{count,  }\item[{bool}]{normalized }\end{DoxyParamCaption})}
+
+
+
+Добавить описатель одного следующего атрибута элемента в конец списка 
+
+\begin{DoxyNote}{Заметки}
+Порядок добавления описателей атрибутов имеет значение. Атрибуты должны описываться последовательно в порядке их визического хранения в бефере вершин 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em count} & \\
+\hline
+{\em normalized} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer__descriptor_a0c51ea493f98820c3708a77e7311ab2b}\label{classrender_1_1vertex__buffer__descriptor_a0c51ea493f98820c3708a77e7311ab2b}} 
+\index{render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}!get\_descriptors@{get\_descriptors}}
+\index{get\_descriptors@{get\_descriptors}!render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}}
+\doxysubsubsection{\texorpdfstring{get\_descriptors()}{get\_descriptors()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structrender_1_1vertex__buffer__descriptor_1_1element__descriptor}{element\+\_\+descriptor}}$>$\& render\+::vertex\+\_\+buffer\+\_\+descriptor\+::get\+\_\+descriptors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Возвращает}
+Списко описателей атрибутов вершины 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1vertex__buffer__descriptor_ac9ebf9b7cbfdf8247559b05629046832}\label{classrender_1_1vertex__buffer__descriptor_ac9ebf9b7cbfdf8247559b05629046832}} 
+\index{render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}!get\_stride@{get\_stride}}
+\index{get\_stride@{get\_stride}!render::vertex\_buffer\_descriptor@{render::vertex\_buffer\_descriptor}}
+\doxysubsubsection{\texorpdfstring{get\_stride()}{get\_stride()}}
+{\footnotesize\ttfamily int render\+::vertex\+\_\+buffer\+\_\+descriptor\+::get\+\_\+stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Возвращает}
+Размер одного описанного элемента буфера в виде суммы размеров всех описателей атрибутов элемента 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{structrender_1_1vertex__buffer__descriptor_1_1element__descriptor}{render\+::vertex\+\_\+buffer\+\_\+descriptor\+::element\+\_\+descriptor}} 
+\end{DoxySeeAlso}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/vertex\+\_\+buffer\+\_\+descriptor.\+h\end{DoxyCompactItemize}

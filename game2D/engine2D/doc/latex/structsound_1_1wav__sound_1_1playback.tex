@@ -1,0 +1,70 @@
+\hypertarget{structsound_1_1wav__sound_1_1playback}{}\doxysection{Структура sound\+::wav\+\_\+sound\+::playback}
+\label{structsound_1_1wav__sound_1_1playback}\index{sound::wav\_sound::playback@{sound::wav\_sound::playback}}
+
+
+Проигрыватель звука Структура, отвечающая за проигрывание wav\+\_\+sound-\/звука.  
+
+
+
+
+{\ttfamily \#include $<$wav\+\_\+sound.\+h$>$}
+
+
+
+Граф связей класса sound\+::wav\+\_\+sound\+::playback\+:
+% FIG 0
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a3c9eeddf6bd6ff7f2b304aa9960afa96}{playback}} (\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&\mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a877625b6bb1e828036b43d40cb8ea785}{sound}}, uint32\+\_\+t pos=0, bool loop=false, playback\+\_\+state \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a7e1fb4da4dd1b77d6285003504796015}{state}}=playback\+\_\+state \+::on\+\_\+play)
+\begin{DoxyCompactList}\small\item\em Создания звуковой дорожки \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a1a44c41c9c2ad82ec0d07c9186684fa9}\label{structsound_1_1wav__sound_1_1playback_a1a44c41c9c2ad82ec0d07c9186684fa9}} 
+void \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a1a44c41c9c2ad82ec0d07c9186684fa9}{replay}} ()
+\begin{DoxyCompactList}\small\item\em Устанавлевает состояние дорожки в начало проигрыша и состояние воспроизведения \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a877625b6bb1e828036b43d40cb8ea785}\label{structsound_1_1wav__sound_1_1playback_a877625b6bb1e828036b43d40cb8ea785}} 
+\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \& \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a877625b6bb1e828036b43d40cb8ea785}{sound}}
+\begin{DoxyCompactList}\small\item\em звук для проигрывания \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a49d53862fe09babcbf20dc6830e30786}\label{structsound_1_1wav__sound_1_1playback_a49d53862fe09babcbf20dc6830e30786}} 
+uint32\+\_\+t \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a49d53862fe09babcbf20dc6830e30786}{position}} \{0\}
+\begin{DoxyCompactList}\small\item\em позиция начала проигрывания \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a7e1fb4da4dd1b77d6285003504796015}\label{structsound_1_1wav__sound_1_1playback_a7e1fb4da4dd1b77d6285003504796015}} 
+playback\+\_\+state \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a7e1fb4da4dd1b77d6285003504796015}{state}} \{playback\+\_\+state \+::on\+\_\+play\}
+\begin{DoxyCompactList}\small\item\em зациленность дорожки \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a1216b195f86ac199eb81e4141aeafcd3}\label{structsound_1_1wav__sound_1_1playback_a1216b195f86ac199eb81e4141aeafcd3}} 
+bool \mbox{\hyperlink{structsound_1_1wav__sound_1_1playback_a1216b195f86ac199eb81e4141aeafcd3}{is\+\_\+looped}} \{false\}
+\begin{DoxyCompactList}\small\item\em состояние воспроизведения \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Проигрыватель звука Структура, отвечающая за проигрывание wav\+\_\+sound-\/звука. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{structsound_1_1wav__sound_1_1playback_a3c9eeddf6bd6ff7f2b304aa9960afa96}\label{structsound_1_1wav__sound_1_1playback_a3c9eeddf6bd6ff7f2b304aa9960afa96}} 
+\index{sound::wav\_sound::playback@{sound::wav\_sound::playback}!playback@{playback}}
+\index{playback@{playback}!sound::wav\_sound::playback@{sound::wav\_sound::playback}}
+\doxysubsubsection{\texorpdfstring{playback()}{playback()}}
+{\footnotesize\ttfamily sound\+::wav\+\_\+sound\+::playback\+::playback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsound_1_1wav__sound}{wav\+\_\+sound}} \&}]{sound,  }\item[{uint32\+\_\+t}]{pos = {\ttfamily 0},  }\item[{bool}]{loop = {\ttfamily false},  }\item[{playback\+\_\+state}]{state = {\ttfamily playback\+\_\+state~\+:\+:on\+\_\+play} }\end{DoxyParamCaption})}
+
+
+
+Создания звуковой дорожки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sound} & звук для проигрывания \\
+\hline
+{\em pos} & позиция начала проигрывания \\
+\hline
+{\em loop} & зациленность дорожки \\
+\hline
+{\em state} & состояние воспроизведения \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/sound/wav\+\_\+sound.\+h\end{DoxyCompactItemize}

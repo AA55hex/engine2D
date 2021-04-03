@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/render/index_buffer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ada157988d47c0ed8971be2c0e2fe61c.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">index_buffer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrender_1_1index__buffer.html">index_buffer</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a5ef5c31f82cc793e740eb40562096506">   18</a></span>&#160;  <a class="code" href="classrender_1_1index__buffer.html#a5ef5c31f82cc793e740eb40562096506">index_buffer</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a2424a8ec6cab19b71763c6539086b30c">   24</a></span>&#160;  <a class="code" href="classrender_1_1index__buffer.html#a2424a8ec6cab19b71763c6539086b30c">index_buffer</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* data);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a82e1dae0419e8ee622139581e5030a64">   33</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1index__buffer.html#a82e1dae0419e8ee622139581e5030a64">bind</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a5d220d9d6033c4486c6b8daa710b89c1">   38</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1index__buffer.html#a5d220d9d6033c4486c6b8daa710b89c1">detach</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a1fc6c9f8011af89a586250ccc2d047fe">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1index__buffer.html#a1fc6c9f8011af89a586250ccc2d047fe">restore</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* data);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a7229c5e05b610a0ef5065c8477a8b2f0">   62</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1index__buffer.html#a7229c5e05b610a0ef5065c8477a8b2f0">update</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* data);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  ~<a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classrender_1_1index__buffer.html#a5ef5c31f82cc793e740eb40562096506">index_buffer</a>(<a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>&amp;&amp;);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>&amp; operator=(<a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>&amp;&amp;);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classrender_1_1index__buffer.html#a5ef5c31f82cc793e740eb40562096506">index_buffer</a>(<a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classrender_1_1index__buffer.html">index_buffer</a> operator=(<a class="code" href="classrender_1_1index__buffer.html">index_buffer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classrender_1_1index__buffer.html#a7cd3e81aea399ec5fd8436646264394c">   76</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classrender_1_1index__buffer.html#a7cd3e81aea399ec5fd8436646264394c">get_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> count; }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  GLuint <span class="keywordtype">id</span>{0};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count{0};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLenum buffer_type{GL_ELEMENT_ARRAY_BUFFER};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLuint element_size{<span class="keyword">sizeof</span>(GLuint)};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}  <span class="comment">// namespace render</span></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html"><div class="ttname"><a href="classrender_1_1index__buffer.html">render::index_buffer</a></div><div class="ttdoc">Буфер индексов вершин шейдера Данный класс является оболочкой gl-структуры, отвечающей за хранение но...</div><div class="ttdef"><b>Definition:</b> index_buffer.h:13</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a1fc6c9f8011af89a586250ccc2d047fe"><div class="ttname"><a href="classrender_1_1index__buffer.html#a1fc6c9f8011af89a586250ccc2d047fe">render::index_buffer::restore</a></div><div class="ttdeci">void restore(const unsigned int count, const unsigned int *data)</div><div class="ttdoc">Перезагрузка буфера Сбрасывает массив данных в буфере и создает новый, заполняя его новыми данными.</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a2424a8ec6cab19b71763c6539086b30c"><div class="ttname"><a href="classrender_1_1index__buffer.html#a2424a8ec6cab19b71763c6539086b30c">render::index_buffer::index_buffer</a></div><div class="ttdeci">index_buffer(const unsigned int count, const unsigned int *data)</div><div class="ttdoc">Инициализация</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a5d220d9d6033c4486c6b8daa710b89c1"><div class="ttname"><a href="classrender_1_1index__buffer.html#a5d220d9d6033c4486c6b8daa710b89c1">render::index_buffer::detach</a></div><div class="ttdeci">void detach() const</div><div class="ttdoc">Деактивация буфера Отвязывает буфер от контекста окна, устанавливая буфер по умолчанию</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a5ef5c31f82cc793e740eb40562096506"><div class="ttname"><a href="classrender_1_1index__buffer.html#a5ef5c31f82cc793e740eb40562096506">render::index_buffer::index_buffer</a></div><div class="ttdeci">index_buffer()</div><div class="ttdoc">Инициализация пустым буфером</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a7229c5e05b610a0ef5065c8477a8b2f0"><div class="ttname"><a href="classrender_1_1index__buffer.html#a7229c5e05b610a0ef5065c8477a8b2f0">render::index_buffer::update</a></div><div class="ttdeci">void update(const unsigned int count, const unsigned int *data)</div><div class="ttdoc">Изменение буфера Перезаписывает данные буфера, начиная с первого элемента массива новыми данными.</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a7cd3e81aea399ec5fd8436646264394c"><div class="ttname"><a href="classrender_1_1index__buffer.html#a7cd3e81aea399ec5fd8436646264394c">render::index_buffer::get_count</a></div><div class="ttdeci">unsigned int get_count() const</div><div class="ttdoc">Возвращает количество элементов в буфере</div><div class="ttdef"><b>Definition:</b> index_buffer.h:76</div></div>
+<div class="ttc" id="aclassrender_1_1index__buffer_html_a82e1dae0419e8ee622139581e5030a64"><div class="ttname"><a href="classrender_1_1index__buffer.html#a82e1dae0419e8ee622139581e5030a64">render::index_buffer::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdoc">Активация буфера Привязывает буфер к контексту окна, делая его активным. Все данные об индексах верши...</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,147 @@
+\hypertarget{classrender_1_1shader__program}{}\doxysection{Класс render\+::shader\+\_\+program}
+\label{classrender_1_1shader__program}\index{render::shader\_program@{render::shader\_program}}
+
+
+Шейдерная программа Класс представляет собой абстракцию вокруг gl-\/программы отрисовки.  
+
+
+
+
+{\ttfamily \#include $<$shader\+\_\+program.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrender_1_1shader__program_a1f457cbde670e47941e06388cd99cb04}{shader\+\_\+program}} (const std\+::string \&vert\+\_\+src, const std\+::string \&frag\+\_\+src)
+\begin{DoxyCompactList}\small\item\em Инициализация шейдерной программы Взаимодействует только с шейдерами, написанными на языке GLSL 300 es. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrender_1_1shader__program_a2aa6e251ca8079b19db5297ae7eaf2fc}{is\+\_\+compiled}} () const
+\begin{DoxyCompactList}\small\item\em Состояние компиляции программы Указывает, удачно ли скомпилировалась программа \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrender_1_1shader__program_afdf60553eaa9793df70d0af5a4fb1393}{use}} () const
+\begin{DoxyCompactList}\small\item\em Активация шейдерной программы Делает программу активной для контекста окна. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1shader__program_a4a8b6e779c2320427d72ebdedeb21123}\label{classrender_1_1shader__program_a4a8b6e779c2320427d72ebdedeb21123}} 
+\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&\&)
+\item 
+\mbox{\Hypertarget{classrender_1_1shader__program_a9abbc229b7bcfeca69301a4b1469f28a}\label{classrender_1_1shader__program_a9abbc229b7bcfeca69301a4b1469f28a}} 
+{\bfseries shader\+\_\+program} (\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&\&)
+\item 
+bool \mbox{\hyperlink{classrender_1_1shader__program_a2b7a39a6346155718f3feeabf71f55c5}{set\+\_\+uniform}} (std\+::string u\+\_\+name, int value)
+\begin{DoxyCompactList}\small\item\em Установка uniform-\/поля \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrender_1_1shader__program_acc4d39273f8b6e4a4362dc148ed8e685}{set\+\_\+uniform}} (std\+::string u\+\_\+name, const glm\+::mat4x4 \&value)
+\begin{DoxyCompactList}\small\item\em Установка uniform-\/поля \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrender_1_1shader__program_a66fd624b12ce82efa569eee494468b4b}\label{classrender_1_1shader__program_a66fd624b12ce82efa569eee494468b4b}} 
+{\bfseries shader\+\_\+program} (\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&)=delete
+\item 
+\mbox{\Hypertarget{classrender_1_1shader__program_ab5c5439f2aea7cc17205cc1c6cb5fd9c}\label{classrender_1_1shader__program_ab5c5439f2aea7cc17205cc1c6cb5fd9c}} 
+\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \& {\bfseries operator=} (\mbox{\hyperlink{classrender_1_1shader__program}{shader\+\_\+program}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Шейдерная программа Класс представляет собой абстракцию вокруг gl-\/программы отрисовки. 
+
+\begin{DoxyNote}{Заметки}
+Взаимодействует только с шейдерами, написанными на языке GLSL 300 es 
+\end{DoxyNote}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrender_1_1shader__program_a1f457cbde670e47941e06388cd99cb04}\label{classrender_1_1shader__program_a1f457cbde670e47941e06388cd99cb04}} 
+\index{render::shader\_program@{render::shader\_program}!shader\_program@{shader\_program}}
+\index{shader\_program@{shader\_program}!render::shader\_program@{render::shader\_program}}
+\doxysubsubsection{\texorpdfstring{shader\_program()}{shader\_program()}}
+{\footnotesize\ttfamily render\+::shader\+\_\+program\+::shader\+\_\+program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vert\+\_\+src,  }\item[{const std\+::string \&}]{frag\+\_\+src }\end{DoxyParamCaption})}
+
+
+
+Инициализация шейдерной программы Взаимодействует только с шейдерами, написанными на языке GLSL 300 es. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em vert\+\_\+src} & строка с source-\/кодом вершинного шейдера \\
+\hline
+{\em frag\+\_\+src} & строка с source-\/кодом фрагментного шейдера \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+процесс инициализации лоигруется с указанием ошибок инициализации 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrender_1_1shader__program_a2aa6e251ca8079b19db5297ae7eaf2fc}\label{classrender_1_1shader__program_a2aa6e251ca8079b19db5297ae7eaf2fc}} 
+\index{render::shader\_program@{render::shader\_program}!is\_compiled@{is\_compiled}}
+\index{is\_compiled@{is\_compiled}!render::shader\_program@{render::shader\_program}}
+\doxysubsubsection{\texorpdfstring{is\_compiled()}{is\_compiled()}}
+{\footnotesize\ttfamily bool render\+::shader\+\_\+program\+::is\+\_\+compiled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Состояние компиляции программы Указывает, удачно ли скомпилировалась программа 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ удачная компиляция, false -\/ компиляция прервана 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1shader__program_acc4d39273f8b6e4a4362dc148ed8e685}\label{classrender_1_1shader__program_acc4d39273f8b6e4a4362dc148ed8e685}} 
+\index{render::shader\_program@{render::shader\_program}!set\_uniform@{set\_uniform}}
+\index{set\_uniform@{set\_uniform}!render::shader\_program@{render::shader\_program}}
+\doxysubsubsection{\texorpdfstring{set\_uniform()}{set\_uniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool render\+::shader\+\_\+program\+::set\+\_\+uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{u\+\_\+name,  }\item[{const glm\+::mat4x4 \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Установка uniform-\/поля 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em u\+\_\+name} & имя uniform-\/поля в шейдере \\
+\hline
+{\em value} & значение для заполнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrender_1_1shader__program_a2b7a39a6346155718f3feeabf71f55c5}\label{classrender_1_1shader__program_a2b7a39a6346155718f3feeabf71f55c5}} 
+\index{render::shader\_program@{render::shader\_program}!set\_uniform@{set\_uniform}}
+\index{set\_uniform@{set\_uniform}!render::shader\_program@{render::shader\_program}}
+\doxysubsubsection{\texorpdfstring{set\_uniform()}{set\_uniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool render\+::shader\+\_\+program\+::set\+\_\+uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{u\+\_\+name,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Установка uniform-\/поля 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em u\+\_\+name} & имя uniform-\/поля в шейдере \\
+\hline
+{\em value} & значение для заполнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+для указания значения для типа sampler2D необходима вписать индекс текстурного буфера, к кторому привязана текстура. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Возвращает}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classrender_1_1texture2D}{render\+::texture2D}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classrender_1_1shader__program_afdf60553eaa9793df70d0af5a4fb1393}\label{classrender_1_1shader__program_afdf60553eaa9793df70d0af5a4fb1393}} 
+\index{render::shader\_program@{render::shader\_program}!use@{use}}
+\index{use@{use}!render::shader\_program@{render::shader\_program}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void render\+::shader\+\_\+program\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Активация шейдерной программы Делает программу активной для контекста окна. 
+
+\begin{DoxyNote}{Заметки}
+Одновременно может быть активна только одна программа, остальные деактивируются 
+\end{DoxyNote}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/render/shader\+\_\+program.\+h\end{DoxyCompactItemize}

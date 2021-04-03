@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine2D: Исходный файл include/render/vertex_array.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine2D
+   &#160;<span id="projectnumber">0.2 beta</span>
+   </div>
+   <div id="projectbrief">Игровой движок для двухмерных платформеров</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ada157988d47c0ed8971be2c0e2fe61c.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vertex_array.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;index_buffer.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;vertex_buffer.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>render</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span>vertex_buffer;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>vertex_buffer_descriptor;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrender_1_1vertex__array.html">vertex_array</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html#ab6e5cd3ffefbe59d91ad0fb951e8cac5">   31</a></span>&#160;  <a class="code" href="classrender_1_1vertex__array.html#ab6e5cd3ffefbe59d91ad0fb951e8cac5">vertex_array</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html#a661331996cb77378e431e020b06512b5">   37</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1vertex__array.html#a661331996cb77378e431e020b06512b5">bind</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html#a334b320a7bb73baf9603bfac3865d248">   43</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1vertex__array.html#a334b320a7bb73baf9603bfac3865d248">detach</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html#a6604bb01bedb2f4f969bdd014bfa3357">   57</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrender_1_1vertex__array.html#a6604bb01bedb2f4f969bdd014bfa3357">bind_vertex_buffer</a>(<span class="keyword">const</span> <a class="code" href="classrender_1_1vertex__buffer.html">vertex_buffer</a>&amp; buffer,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                          <span class="keyword">const</span> <a class="code" href="classrender_1_1vertex__buffer__descriptor.html">vertex_buffer_descriptor</a>&amp; descriptor);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classrender_1_1vertex__array.html#a651505879d862fd466aaf08b48eeb262">   64</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classrender_1_1vertex__array.html#a651505879d862fd466aaf08b48eeb262">get_attributes_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> va_arrays_count; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classrender_1_1vertex__array.html#ab6e5cd3ffefbe59d91ad0fb951e8cac5">vertex_array</a>(<a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp;&amp;);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp; operator=(<a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp;&amp;);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  ~<a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classrender_1_1vertex__array.html#ab6e5cd3ffefbe59d91ad0fb951e8cac5">vertex_array</a>(<a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp; operator=(<a class="code" href="classrender_1_1vertex__array.html">vertex_array</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  GLuint <span class="keywordtype">id</span>{0};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> va_arrays_count{0};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}  <span class="comment">// namespace render</span></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html"><div class="ttname"><a href="classrender_1_1vertex__array.html">render::vertex_array</a></div><div class="ttdoc">Массив атрибутов вершин (vao) Данный класс представляет собой оболочку вокруг соответствующей gl-стру...</div><div class="ttdef"><b>Definition:</b> vertex_array.h:25</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html_a334b320a7bb73baf9603bfac3865d248"><div class="ttname"><a href="classrender_1_1vertex__array.html#a334b320a7bb73baf9603bfac3865d248">render::vertex_array::detach</a></div><div class="ttdeci">void detach() const</div><div class="ttdoc">Деактивация vao Делает активной стандартный vao.</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html_a651505879d862fd466aaf08b48eeb262"><div class="ttname"><a href="classrender_1_1vertex__array.html#a651505879d862fd466aaf08b48eeb262">render::vertex_array::get_attributes_count</a></div><div class="ttdeci">unsigned int get_attributes_count() const</div><div class="ttdoc">Возвращает количество используемых атрибутов vao.</div><div class="ttdef"><b>Definition:</b> vertex_array.h:64</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html_a6604bb01bedb2f4f969bdd014bfa3357"><div class="ttname"><a href="classrender_1_1vertex__array.html#a6604bb01bedb2f4f969bdd014bfa3357">render::vertex_array::bind_vertex_buffer</a></div><div class="ttdeci">void bind_vertex_buffer(const vertex_buffer &amp;buffer, const vertex_buffer_descriptor &amp;descriptor)</div><div class="ttdoc">Привязка вершинного буфера к vao Привязывает буфер вершин к своему контексту, описывая передаваемые а...</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html_a661331996cb77378e431e020b06512b5"><div class="ttname"><a href="classrender_1_1vertex__array.html#a661331996cb77378e431e020b06512b5">render::vertex_array::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdoc">Активация vao Делакет vao активным.</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__array_html_ab6e5cd3ffefbe59d91ad0fb951e8cac5"><div class="ttname"><a href="classrender_1_1vertex__array.html#ab6e5cd3ffefbe59d91ad0fb951e8cac5">render::vertex_array::vertex_array</a></div><div class="ttdeci">vertex_array()</div><div class="ttdoc">Инициализация vao.</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer__descriptor_html"><div class="ttname"><a href="classrender_1_1vertex__buffer__descriptor.html">render::vertex_buffer_descriptor</a></div><div class="ttdoc">Описатель вершины Класс, хранящий метаданные вершины какого-либо вершинного буфера....</div><div class="ttdef"><b>Definition:</b> vertex_buffer_descriptor.h:16</div></div>
+<div class="ttc" id="aclassrender_1_1vertex__buffer_html"><div class="ttname"><a href="classrender_1_1vertex__buffer.html">render::vertex_buffer</a></div><div class="ttdoc">Буфер вершин Оболочка gl-буфера вершин. Представляет собой массив произвольных данных,...</div><div class="ttdef"><b>Definition:</b> vertex_buffer.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
