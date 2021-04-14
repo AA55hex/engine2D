@@ -13,9 +13,6 @@ add_executable(game2D game/src/main.cpp
     res/shaders/test_shader.vert
     res/shaders/test_shader.frag)
 
-add_subdirectory(external/glad)
-add_subdirectory(external/glm)
-
 add_subdirectory(engine2D)
 
 

@@ -1,3 +1,5 @@
+#include <core/audio.h>
+#include <core/window.h>
 #include <glm/vec2.hpp>
 #include <iostream>
 #include "core/engine.h"
@@ -5,16 +7,11 @@
 #include "glm/vec2.hpp"
 #include "input/input_event.h"
 #include "input/input_manager.h"
-#include "render/index_buffer.h"
-#include "render/renderer.h"
 #include "render/shader_program.h"
 #include "render/sprite2D.h"
 #include "render/sprite_animator.h"
-#include "render/vertex_array.h"
-#include "render/vertex_buffer.h"
 #include "resources/resource_manager.h"
 #include "sound/sound_buffer.h"
-
 class game : public core::igame
 {
  public:
@@ -160,12 +157,12 @@ class game : public core::igame
 int main()
 {
   using namespace core;
-  engine::inicialize(640, 480, "test", true);
-  // auto sound{mgr.load_wav("highlands", "sound/highlands.wav")};
+  window_properties w_prop{640, 480, "test", true};
+  audio_properties a_prop{};
+  engine::init(w_prop, a_prop);
 
-  render::renderer::clear_color(0.f, 0.f, 0.f, 0.0f);
   game my_game{};
-  engine::play(my_game);
+  engine::launch(my_game);
 
   engine::dispose();
   return 0;
